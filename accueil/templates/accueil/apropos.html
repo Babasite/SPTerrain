@@ -443,9 +443,11 @@ p{
 Retrouvez mon parcours professionnel, mes compétences et mes expériences.
 </p>
 
-<img src="{% static 'accueil/images/CV.png' %}"
-     alt="Mon CV"
-     class="cv-image">
+<iframe src="{% url 'cv' %}"
+        title="Mon CV"
+        class="cv-image"
+        style="height:1200px;">
+</iframe>
 </div>
 
 <div class="block">

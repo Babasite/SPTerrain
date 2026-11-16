@@ -1,0 +1,459 @@
+/* =========================
+   PARAMÈTRES GÉNÉRAUX
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bleu-nuit: #163451;
+    --bleu-petrole: #19677b;
+    --vert-sante: #008e87;
+    --bleu-prevention: #2465a4;
+    --vert-terrain: #38834c;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #e5e7eb;
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: #263238;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/* =========================
+   PAGE A4
+========================= */
+
+.cv {
+    width: 210mm;
+    min-height: 297mm;
+    margin: auto;
+    padding: 8mm;
+    background: white;
+    box-shadow: 0 0 15px #0002;
+}
+
+/* =========================
+   IDENTITÉ
+========================= */
+
+.identite {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.photo {
+    width: 85px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    transform: translate(-65px,20px);
+}
+.coordonnees {
+    text-align: center;
+}
+
+.coordonnees h1 { /*Bastien Sabouret*/
+    color: var(--bleu-nuit);
+    font-size: 15pt;
+    margin-bottom: 5px;
+    transform: translate(75px, -55px);
+    max-width: 100px;
+}
+
+.coordonnees p { /*Adresse*/
+    font-size: 9pt;
+    line-height: 1.4;
+    transform: translate(-10px,-30px);
+}
+
+/* =========================
+   BANDEAU DE PRÉSENTATION
+========================= */
+
+.bandeau {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: #eef5f8;
+    border-radius: 6px;
+    border-left: 4px solid var(--bleu-petrole);
+    flex-direction: row-reverse;
+    height: 165px;
+    margin-left: -20px;
+    margin-right: -20px;
+    flex: 1;
+}
+
+.presentation { 
+    flex: 1;
+    min-width: 0;
+    transform: translateX(120px);
+}
+
+.presentation h2 {  /* Profil pluridisciplinaire*/
+    color: var(--bleu-nuit);
+    font-size: 13pt;
+    transform: translate(5px,6px);
+}
+
+.presentation h3 { /* Santé Prévention Terrain*/
+    color: var(--bleu-petrole);
+    font-size: 10pt;
+    font-style: italic;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    transform: translate(5px,5px);
+}
+
+.presentation p { /*Le texte de présentation*/
+    font-size: 9pt;
+    line-height: 1.3;
+    max-width: 220px;
+    transform: translate(5px,0px);
+}
+
+/* =========================
+   SCHÉMA ONE HEALTH (SVG)
+========================= */
+
+.schema {
+    width: 32%;
+    height: auto;
+    flex-shrink: 0;
+    display: block;
+    transform: translateX(60px) scale(1.8);
+}
+
+/* Lignes de connexion pointillées */
+
+.connexions line {
+    stroke: #8496a8;
+    stroke-width: 2;
+    stroke-dasharray: 6 5;
+}
+
+/* Rectangles périphériques */
+
+.bloc-schema rect {
+    fill: #26313d;
+    stroke: #8496a8;
+    stroke-width: 1.2;
+}
+
+/* Textes des rectangles périphériques */
+
+.bloc-schema text {
+    fill: white;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-anchor: middle;
+}
+
+/* Rectangle central */
+
+.centre-schema rect {
+    fill: var(--bleu-petrole);
+}
+
+/* Textes du rectangle central */
+
+.centre-schema text {
+    fill: white;
+    font-family: Arial, sans-serif;
+    text-anchor: middle;
+    font-weight: bold;
+}
+
+.centre-titre {
+    font-size: 23px;
+}
+
+.centre-one-health {
+    font-size: 30px;
+}
+
+/* =========================
+   RUBRIQUES
+========================= */
+
+.rubrique {
+    margin-top: 12px;
+}
+
+.titre-rubrique {
+    font-size: 13pt;
+    color: var(--bleu-nuit);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--bleu-petrole);
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   EXPÉRIENCES : 3 COLONNES
+========================= */
+
+.experiences {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.colonne {
+    border: 1px solid #d4dce2;
+    border-radius: 5px;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+.colonne h3 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11pt;
+    padding: 7px;
+}
+
+.sante h3 {
+    background: var(--vert-sante);
+}
+
+.prevention h3 {
+    background: var(--bleu-prevention);
+}
+
+.terrain h3 {
+    background: var(--vert-terrain);
+}
+.petit-texte {
+    font-size: 8pt;
+    font-weight: bold;
+    color: #596875;
+}
+/* Mise en valeur des compétences */
+
+.competence {
+    font-weight: bold;
+}
+
+.sante .competence {
+    color: var(--vert-sante);
+}
+
+.prevention .competence {
+    color: var(--bleu-prevention);
+}
+
+.terrain .competence {
+    color: var(--vert-terrain);
+}
+
+/* =========================
+   FORMATIONS ET INTÉRÊTS
+========================= */
+
+.formations p,
+.interets p {
+    font-size: 9pt;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+/* =========================
+   BOUTON DE TÉLÉCHARGEMENT
+========================= */
+
+.no-print {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background: var(--bleu-nuit);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 11pt;
+    cursor: pointer;
+}
+
+.no-print:hover {
+    background: var(--bleu-petrole);
+}
+
+/* =========================
+   EN-TÊTE HORIZONTAL
+========================= */
+
+.haut-cv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.identite {
+    width: 30%;
+    flex-shrink: 0;
+    flex-direction: column;
+    padding: 0;
+    gap: 8px;
+}
+/* =========================
+   CONTENU DES 3 COLONNES
+========================= */
+
+.contenu-colonne {
+    padding: 10px;
+}
+
+.experience {
+    margin-bottom: 12px;
+}
+
+.experience:last-child {
+    margin-bottom: 0;
+}
+
+.experience .periode {
+    display: block;
+    font-size: 8pt;
+    font-weight: bold;
+    color: #596875;
+    margin-bottom: 2px;
+}
+
+.experience h4 {
+    font-size: 10pt;
+    color: var(--bleu-nuit);
+    margin: 0 0 4px 0;
+}
+
+.experience p {
+    font-size: 9pt;
+    line-height: 1.35;
+    margin: 0;
+}
+
+/* Couleurs de fond des colonnes */
+
+.sante {
+    background: #edf7f6;
+}
+
+.prevention {
+    background: #edf3fa;
+}
+
+.terrain {
+    background: #edf6ee;
+}
+
+/* =========================
+   IMPRESSION PDF
+========================= */
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+@media print {
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    html, body {
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+    }
+
+    body {
+        display: block !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    /* Dimensions du CV */
+
+    .cv {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        min-height: 0 !important;
+        height: auto !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        zoom: 1;
+
+        /* =========================
+           MARGES PDF PERSONNALISABLES
+        ========================= */
+
+        padding-top: 15mm !important;     /* HAUT */
+        padding-bottom: 15mm !important;  /* BAS */
+        padding-left: 8mm !important;     /* GAUCHE */
+        padding-right: 8mm !important;    /* DROITE */
+    }
+
+    /* En-tête */
+
+    .haut-cv {
+        margin-top: 0;
+    }
+
+    /* Espacement des rubriques */
+
+    .rubrique {
+        margin-top: 8px;
+    }
+
+    .titre-rubrique {
+        margin-bottom: 5px;
+        padding-bottom: 3px;
+    }
+
+    .contenu-colonne {
+        padding: 8px;
+    }
+
+    .experience {
+        margin-bottom: 8px;
+    }
+
+    .experience p {
+        line-height: 1.25;
+    }
+
+    .formations p {
+        margin-bottom: 2px;
+        line-height: 1.25;
+    }
+
+    /* Affichage intégral des colonnes */
+
+    .colonne {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    /* Masquer le bouton de téléchargement */
+
+    .no-print {
+        display: none !important;
+    }
+}

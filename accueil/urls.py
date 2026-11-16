@@ -36,6 +36,7 @@ urlpatterns = [
     path("outils/", views.outils, name="outils"),
     path("terrain/", views.terrain, name="terrain"),
     path("apropos/", views.apropos, name="apropos"),
+    path("cv/", views.cv, name="cv"),
     path("pompier/", views.pompier, name="pompier"),
     path("contact/", views.contact, name="contact"),
     path("boutique/", views.boutique, name="boutique"),

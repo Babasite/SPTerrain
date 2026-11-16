@@ -1,0 +1,471 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Bastien Sabouret</title>
+    <link rel="stylesheet" href="{% static 'CV/cv.css' %}">
+</head>
+
+<body>
+
+    <main class="cv">
+
+        <!-- IDENTITÉ -->
+<div class="haut-cv">
+        <header class="identite">
+
+            <img src="{% static 'CV/photo.png' %}" alt="Photo professionnelle" class="photo">
+
+            <div class="coordonnees">
+    <h1>Bastien SABOURET</h1>
+    <p>Seine-et-Marne (77) – Île-de-France</p>
+    <p>Contact via SPterrain</p>
+    <p>www.spterrain.fr</p>
+    <p>https://github.com/Babasite</p>
+</div>
+
+        </header>
+
+        <!-- BANDEAU DE PRÉSENTATION -->
+
+        <section class="bandeau">
+
+            <div class="presentation">
+
+                <h2>Profil pluridisciplinaire</h2>
+
+                <h3>Santé • Prévention • Terrain</h3>
+
+                <p>
+                    Orienté vers le <br>
+                    <strong>Renseignement One Health</strong>.<br>
+                    <span style="display: block; height: 4px;"></span>
+                    Également disponible comme :<br>
+                    <strong>Journaliste</strong>,<br>
+                    <strong>Infirmier</strong>,<br>
+                    <strong>Développeur full stack</strong> (en cours de formation).
+                </p>
+
+            </div>
+
+            <!-- SCHÉMA ONE HEALTH -->
+
+            <svg class="schema"
+                 viewBox="0 0 600 460"
+                 xmlns="http://www.w3.org/2000/svg"
+                 role="img"
+                 aria-label="Profil pluridisciplinaire One Health">
+
+                <!-- Lignes de connexion -->
+
+                <g class="connexions">
+                    <line x1="300" y1="230" x2="300" y2="40"/>
+                    <line x1="300" y1="230" x2="125" y2="115"/>
+                    <line x1="300" y1="230" x2="470" y2="115"/>
+                    <line x1="300" y1="230" x2="65" y2="230"/>
+                    <line x1="300" y1="230" x2="535" y2="230"/>
+                    <line x1="300" y1="230" x2="125" y2="345"/>
+                    <line x1="300" y1="230" x2="475" y2="345"/>
+                    <line x1="300" y1="230" x2="300" y2="420"/>
+                </g>
+
+                <!-- Infirmier -->
+
+                <g class="bloc-schema">
+                    <rect x="220" y="10"
+                          width="160" height="60" rx="10"/>
+
+                    <text x="300" y="45">Infirmier</text>
+                </g>
+
+                <!-- Journaliste reporter d’images -->
+
+                <g class="bloc-schema">
+                    <rect x="10" y="85"
+                          width="230" height="60" rx="10"/>
+
+                    <text x="125" y="110">
+                        <tspan x="125">Journaliste reporter</tspan>
+                        <tspan x="125" dy="19">d’images</tspan>
+                    </text>
+                </g>
+
+                <!-- Surveillance épidémiologique -->
+
+                <g class="bloc-schema">
+                    <rect x="350" y="85"
+                          width="240" height="60" rx="10"/>
+
+                    <text x="470" y="110">
+                        <tspan x="470">Surveillance épidémiologique</tspan>
+                        <tspan x="470" dy="19">humaine et animale</tspan>
+                    </text>
+                </g>
+
+               <!-- Développeur full stack (à gauche) -->
+
+<g class="bloc-schema">
+    <rect x="5" y="200"
+          width="120" height="60" rx="10"/>
+
+    <text x="65" y="225">
+        <tspan x="65">Développeur</tspan>
+        <tspan x="65" dy="19">full stack</tspan>
+    </text>
+</g>
+
+<!-- Opticien (à droite) -->
+
+<g class="bloc-schema">
+    <rect x="475" y="200"
+          width="120" height="60" rx="10"/>
+
+    <text x="535" y="235">Opticien</text>
+</g>
+                <!-- Pilote de drone -->
+
+                <g class="bloc-schema">
+                    <rect x="25" y="315"
+                          width="200" height="60" rx="10"/>
+
+                    <text x="125" y="350">Pilote de drone</text>
+                </g>
+
+                <!-- Sapeur-pompier volontaire -->
+
+                <g class="bloc-schema">
+                    <rect x="365" y="315"
+                          width="220" height="60" rx="10"/>
+
+                    <text x="475" y="340">
+                        <tspan x="475">Sapeur-pompier</tspan>
+                        <tspan x="475" dy="19">volontaire</tspan>
+                    </text>
+                </g>
+
+                <!-- Humanitaire -->
+
+                <g class="bloc-schema">
+                    <rect x="210" y="390"
+                          width="180" height="60" rx="10"/>
+
+                    <text x="300" y="425">Humanitaire</text>
+                </g>
+
+                <!-- Rectangle central -->
+
+                <g class="centre-schema">
+
+                    <rect x="135" y="175"
+                          width="330" height="110" rx="14"/>
+
+                    <text x="300" y="220" class="centre-titre">
+                        Renseignement 
+                    </text>
+
+                    <text x="300" y="255" class="centre-one-health">
+                        ONE HEALTH
+                    </text>
+
+                </g>
+
+            </svg>
+
+        </section>
+        </div>
+
+        <!-- EXPÉRIENCES PROFESSIONNELLES -->
+
+<section class="rubrique">
+
+    <h2 class="titre-rubrique">
+        Expériences professionnelles
+    </h2>
+
+    <div class="experiences">
+
+        <!-- COLONNE SANTÉ -->
+
+        <article class="colonne sante">
+
+            <h3>Santé</h3>
+
+            <div class="contenu-colonne">
+
+                <div class="experience">
+                    <span class="periode">Depuis 2023</span>
+                    <h4>Infirmier diplômé d’État</h4>
+                    <p>
+                         <span class="competence">Missions en établissements sanitaires et
+                        médico-sociaux :</span> EFS, Laboratoires (Unilabs, Cerballiance), EHPADs, 
+                        Hôpitaux
+                        (Dialyse, HAD, Psychiatrie, Consultations Externes, SMR-SSR).
+                         <span class="competence">Soins, prévention et coordination.</span>
+                    </p>
+                </div>
+
+                <div class="experience">
+                    <span class="periode">2018-2021</span>
+                    <h4>Stages infirmiers</h4>
+                    <p>
+                        Réanimation (préprofessionnel et renfort Covid / 8 semaines de nuit),
+                        Hématologie, EHPAD (renfort Covid), Néphrologie, Urgences (renfort Covid),
+                        Chirurgie vasculaire, Gériatrie, Psychiatrie,
+                        SSR-SMR, Hépatologie-gastrologie et Libéral.
+                    </p>
+                </div>
+
+                <div class="experience">
+                    <span class="periode">2006-2008</span>
+                    <h4>Opticien</h4>
+                    <p>
+                        Activité en boutiques à Joinville et Charenton :
+                         <span class="competence">Accueil, conseil et optique.</span>
+                    </p>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- COLONNE PRÉVENTION -->
+
+        <article class="colonne prevention">
+
+            <h3>Prévention</h3>
+
+            <div class="contenu-colonne">
+
+                <div class="experience">
+                    <span class="periode">Depuis juin 2026</span>
+                    <h4>Création du site SPterrain</h4>
+                    <p>
+                        Création et mise en ligne d’un site consacré
+                        à la santé et à la prévention.
+                         <span class="competence">Développement web avec assistance de l’IA
+                        et apprentissage autodidacte.</span>
+                    </p>
+                </div>
+
+                <div class="experience">
+                    <span class="periode">2022</span>
+                    <h4>Surveillance épidémiologique – ANSES</h4>
+                    <p>
+                        Stage de 6 mois au laboratoire de santé animale
+                        de Dozulé (Normandie), unité PhEED.
+                        Étude sur le niveau d’entretien des équidés  <span class="competence">:
+                        Questionnaires, statistiques descriptives,
+                        graphiques sous Excel et restitution des résultats.</span>
+                    </p>
+                </div>
+
+                <div class="experience">
+                    <span class="periode">2016-2022</span>
+                    <h4>Sapeur-pompier volontaire</h4>
+                    <p>
+                        SDIS de l’Isère, Première classe.
+                         <span class="competence">Secours et interventions en équipe.</span>
+                        Spécialisation FDF1 (feux de forêt).
+                    </p>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- COLONNE TERRAIN -->
+
+        <article class="colonne terrain">
+
+            <h3>Terrain</h3>
+
+            <div class="contenu-colonne">
+
+                <div class="experience">
+                    <span class="periode">Depuis 2025</span>
+                    <h4>Conseiller municipal</h4>
+                    <p>
+                        Commune de Seine-et-Marne.
+                        Responsable de la gazette communale.
+                         <span class="competence">Rédaction, coordination, communication
+                        auprès des habitants et projets locaux
+                        de prévention.</span>
+                    </p>
+                </div>
+
+                <div class="experience">
+                    <span class="periode">2010-2018</span>
+                    <h4>Journaliste médical et Reporter d’images.
+                    <span class="petit-texte"><u>Carte de presse</u></span>
+                    </h4>
+                    <p>
+                        <span class="competence">Reportages, interviews, rédaction,
+                        vulgarisation scientifique, réalisation,
+                        montage vidéo et prises de vues aériennes par drone.
+                        Collaborations :</span>
+                        ATG (en Guyane 2 ans), Kwezi TV (à Mayotte 1 an), M6, Correspondant pour TF1 
+                        (via ATG),
+                        France 5 (via Actual Production), Com en Région, Mairie de Bayeux 
+                        (lors du "Prix Bayeux-Calvados des correspondants de guerre") et autres médias.
+                    </p>
+                </div>
+
+                <div class="experience">
+                    <span class="periode">2006-2010</span>
+                    <h4>Missions humanitaires</h4>
+                    <p>
+                        <strong>Niger (2006) :</strong>  <span class="competence">Optométrie</span>,
+                        Association MASNAT.<br>
+                        <strong>Inde (2010) :</strong>  <span class="competence">Aide aux soins</span>
+                        à Calcutta, Missionnaires de la Charité.
+                    </p>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+        <!-- FORMATIONS -->
+
+<section class="rubrique formations">
+
+    <h2 class="titre-rubrique">Formations et certifications</h2>
+
+    <div class="formation">
+        <span class="date">2026</span>
+        <p>
+            <strong>Renseignement en santé publique (Public Health Intelligence)</strong>,<br>
+            <strong>Advanced Epidemic Intelligence from Open Sources (EIOS)</strong> –
+            WHO Academy (Académie de l’OMS).
+        </p>
+    </div>
+
+    <div class="formation">
+        <span class="date">2021-2022</span>
+        <p>
+            <strong>Niveau Master 2 – Surveillance Épidémiologique des Maladies Humaines et Animales (SEMHA)</strong> –
+            École Nationale Vétérinaire d’Alfort (ENVA) et CIRAD (Montpellier).
+            Enseignements théoriques validés, mémoire non validé.
+        </p>
+    </div>
+
+    <div class="formation">
+        <span class="date">2018-2021</span>
+        <p>
+            <strong>Diplôme d’État d’Infirmier (IDE)</strong> –
+            IFSI Henri-Mondor (UPEC).
+        </p>
+    </div>
+    <div class="formation">
+    <span class="date">2019</span>
+    <p>
+        <strong>Attestation d’aptitude aux fonctions de Télépilote de drone (Mise à jour)</strong> –
+        DGAC (anciens scénarios S1, S2 et S3).
+    </p>
+    </div>
+    <div class="formation">
+        <span class="date">2015-2017</span>
+        <p>
+            <strong>Diplôme universitaire d’Information et journalisme médical</strong> –
+            UPEC.
+        </p>
+    </div>
+    <div class="formation">
+    <span class="date">2016</span>
+    <p>
+        <strong>Certificats d’aptitude théorique de pilote et d’instructeur ULM</strong> –
+        DGAC.
+    </p>
+    </div>
+    <div class="formation">
+        <span class="date">2009-2010</span>
+        <p>
+            <strong>Master 2 – Journalisme audiovisuel, Option JRI</strong> –
+            École Supérieure de Journalisme de Paris (ESJ).
+        </p>
+    </div>
+
+    <div class="formation">
+        <span class="date">2002-2007</span>
+        <p>
+            <strong>Formation en optique et optométrie (Niveau BTS OL)</strong> –
+            AEPO (contrat de qualification), puis CEREOA.
+        </p>
+    </div>
+
+</section>
+
+        <!-- Informations complémentaires -->
+
+<section class="rubrique interets">
+
+    <h2 class="titre-rubrique">
+        Informations complémentaires
+    </h2>
+
+    <div class="bandeau-interets">
+
+        <div class="permis">
+            <strong>Permis :</strong>
+            Voiture, moto, bateau (fluvial et côtier),
+            théorique pilote et instructeur ULM.
+        </div>
+
+        <div class="loisirs">
+            <strong>Loisirs :</strong>
+            Karaté (ceinture noire 1er Dan) et MMA.
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <button class="no-print" onclick="window.print()">
+        Télécharger mon CV en PDF
+    </button>
+
+    <script>
+
+        function ajusterCV() {
+
+            const cv = document.querySelector('.cv');
+
+            cv.style.setProperty('--zoom-pdf', '1');
+
+            const largeurA4 = 210 * 96 / 25.4;
+            const hauteurA4 = 297 * 96 / 25.4;
+
+            const largeurCV = cv.scrollWidth;
+            const hauteurCV = cv.scrollHeight;
+
+            const zoom = Math.min(
+                largeurA4 / largeurCV,
+                hauteurA4 / hauteurCV,
+                1
+            ) * 0.99;
+
+            cv.style.setProperty('--zoom-pdf', zoom);
+        }
+
+        window.addEventListener('beforeprint', ajusterCV);
+
+        window.addEventListener('afterprint', function () {
+            document.querySelector('.cv')
+                .style.removeProperty('--zoom-pdf');
+        });
+
+    </script>
+
+</body>
+
+
+</html>
