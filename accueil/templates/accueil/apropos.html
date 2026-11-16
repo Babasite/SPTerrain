@@ -446,8 +446,29 @@ Retrouvez mon parcours professionnel, mes compétences et mes expériences.
 <iframe src="{% url 'cv' %}"
         title="Mon CV"
         class="cv-image"
-        style="height:1200px;">
+        style="height:1200px;"
+        onload="ajusterHauteurCV(this)">
 </iframe>
+
+<script>
+function ajusterHauteurCV(iframe) {
+    function redimensionner() {
+        if (iframe.clientWidth <= 767) {
+            iframe.style.height =
+                (iframe.contentDocument.body.scrollHeight + 20) + "px";
+        } else {
+            iframe.style.height = "1200px";
+        }
+    }
+
+    redimensionner();
+
+    const observateur = new ResizeObserver(redimensionner);
+    observateur.observe(iframe.contentDocument.body);
+
+    window.addEventListener("resize", redimensionner);
+}
+</script>
 </div>
 
 <div class="block">

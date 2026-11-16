@@ -457,3 +457,187 @@ h1, h2, h3, p {
         display: none !important;
     }
 }
+/* =========================
+   RESPONSIVE — TABLETTE ET MOBILE
+========================= */
+
+@media screen and (max-width: 767px) {
+
+    html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .cv {
+        width: 100%;
+        max-width: 100%;
+        min-height: 0;
+        padding: 16px;
+        box-shadow: none;
+    }
+
+    /* En-tête */
+
+    .haut-cv {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .identite {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .photo {
+        width: 100px;
+        height: 120px;
+        transform: none;
+    }
+
+    .coordonnees {
+        width: 100%;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .coordonnees h1 {
+        font-size: 22px;
+        max-width: none;
+        transform: none;
+        margin-bottom: 10px;
+    }
+
+    .coordonnees p {
+        font-size: 14px;
+        transform: none;
+        line-height: 1.5;
+    }
+
+    /* Présentation */
+
+    .bandeau {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 16px;
+        gap: 20px;
+    }
+
+    .presentation {
+        width: 100%;
+        transform: none;
+        text-align: center;
+    }
+
+    .presentation h2,
+    .presentation h3,
+    .presentation p {
+        transform: none;
+        max-width: none;
+    }
+
+    .presentation h2 {
+        font-size: 20px;
+    }
+
+    .presentation h3 {
+        font-size: 15px;
+    }
+
+    .presentation p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Schéma One Health */
+
+    .schema {
+        display: block;
+        width: 100%;
+        max-width: 550px;
+        height: auto;
+        transform: none;
+        margin: auto;
+    }
+
+    /* Expériences professionnelles */
+
+    .experiences {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .rubrique {
+        margin-top: 24px;
+    }
+
+    .titre-rubrique {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .colonne h3 {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .contenu-colonne {
+        padding: 15px;
+    }
+
+    .experience {
+        margin-bottom: 18px;
+    }
+
+    .experience .periode {
+        font-size: 12px;
+    }
+
+    .experience h4 {
+        font-size: 15px;
+    }
+
+    .experience p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Formations et certifications */
+
+    .formation {
+        margin-bottom: 15px;
+    }
+
+    .formations p,
+    .interets p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .bandeau-interets {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        line-height: 1.6;
+    }
+
+    /* Bouton PDF */
+
+    .no-print {
+        width: 90%;
+        max-width: 350px;
+        margin: 20px auto;
+        padding: 15px;
+        font-size: 14px;
+    }
+}
