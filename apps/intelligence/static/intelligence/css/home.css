@@ -1,0 +1,428 @@
+/* ========================================
+   SPTERRAIN INTELLIGENCE
+   ONE HEALTH INTELLIGENCE SYSTEM
+   ======================================== */
+
+.intel-page {
+    --intel-bg: #080e15;
+    --intel-panel: #0c151e;
+    --intel-card: #142432;
+    --intel-accent: #62c9bd;
+    --intel-text: #ecf2f7;
+    --intel-muted: #93a5b3;
+    --intel-border: #263641;
+
+    min-height: 100%;
+    padding: 35px 24px;
+    color: var(--intel-text);
+    background: radial-gradient(
+        ellipse at top,
+        #142c39,
+        #080e15 70%
+    );
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.intel-page * {
+    box-sizing: border-box;
+}
+
+.intel-page h1,
+.intel-page h2,
+.intel-page h3,
+.intel-page p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CONTENEUR PRINCIPAL */
+
+.intel-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px;
+    background: var(--intel-panel);
+    border: 1px solid var(--intel-border);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* EN-TÊTE */
+
+.intel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--intel-border);
+}
+
+.intel-brand {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-width: 0;
+}
+
+.intel-brand h1 {
+    margin: 0;
+    color: #c4cbd2;
+    font-size: clamp(23px, 4vw, 44px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.intel-brand h1 span {
+    display: block;
+    color: #ffffff;
+}
+
+.intel-subtitle {
+    margin: 10px 0 0;
+    color: var(--intel-accent);
+    font-size: clamp(10px, 1.7vw, 18px);
+    letter-spacing: 1px;
+}
+
+.intel-page svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.intel-logo {
+    flex-shrink: 0;
+    width: 65px;
+    height: 65px;
+    color: var(--intel-accent);
+}
+
+.intel-lock {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    color: var(--intel-muted);
+}
+
+/* STATUT */
+
+.intel-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 25px 0;
+
+    color: var(--intel-accent);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.intel-status-dot {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--intel-accent);
+    box-shadow: 0 0 12px var(--intel-accent);
+}
+
+/* CARTE MONDIALE */
+
+.intel-visual {
+    margin: 0 0 25px;
+    overflow: hidden;
+    border: 1px solid #23434f;
+    border-radius: 16px;
+    background: #02080d;
+}
+
+.intel-world-map {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.intel-visual figcaption {
+    padding: 12px 10px;
+    color: var(--intel-muted);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+/* GRILLE DES MODULES */
+
+.intel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.intel-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 150px;
+    padding: 24px 15px;
+
+    background: var(--intel-card);
+    border: 1px solid transparent;
+    border-radius: 14px;
+
+    text-align: center;
+
+    transition:
+        border-color 0.25s,
+        background 0.25s,
+        transform 0.25s;
+}
+
+.intel-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--intel-accent);
+    background: #1b303e;
+}
+
+.intel-card svg {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 18px;
+    color: var(--intel-accent);
+}
+
+.intel-card h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.intel-card p {
+    margin: 10px 0 0;
+    color: var(--intel-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* PRÉSENTATION */
+
+.intel-description {
+    max-width: 800px;
+    margin: 45px auto;
+    text-align: center;
+}
+
+.intel-description h2 {
+    color: var(--intel-text);
+    font-size: clamp(20px, 3vw, 29px);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.intel-description p {
+    color: var(--intel-muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ACCÈS PROFESSIONNEL */
+
+.intel-access {
+    padding: 30px 10px;
+    border-top: 1px solid var(--intel-border);
+    text-align: center;
+}
+
+.intel-access svg {
+    width: 30px;
+    height: 30px;
+    color: var(--intel-accent);
+}
+
+.intel-access h2 {
+    margin: 15px 0 8px;
+    color: var(--intel-text);
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.intel-access p {
+    color: var(--intel-muted);
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.intel-access button {
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 15px 30px;
+
+    background: transparent;
+    border: 1px solid var(--intel-accent);
+    border-radius: 7px;
+
+    color: var(--intel-accent);
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.intel-access small {
+    display: block;
+    margin-top: 15px;
+    color: var(--intel-muted);
+}
+
+/* PIED DE PAGE INTELLIGENCE */
+
+.intel-footer {
+    padding: 20px 0 0;
+    border-top: 1px solid var(--intel-border);
+    text-align: center;
+    color: var(--intel-muted);
+    font-size: 11px;
+}
+
+/* TABLETTES */
+
+@media (max-width: 768px) {
+
+    .intel-page {
+        padding: 20px 12px;
+    }
+
+    .intel-shell {
+        padding: 22px;
+        border-radius: 16px;
+    }
+
+    .intel-brand {
+        gap: 15px;
+    }
+
+    .intel-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .intel-grid {
+        gap: 10px;
+    }
+
+    .intel-card {
+        min-height: 130px;
+        padding: 16px 8px;
+    }
+
+    .intel-card h3 {
+        font-size: 13px;
+    }
+
+    .intel-card p {
+        font-size: 11px;
+    }
+
+    .intel-card svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* SMARTPHONES */
+
+@media (max-width: 480px) {
+
+    .intel-page {
+        padding: 10px;
+    }
+
+    .intel-shell {
+        padding: 15px;
+    }
+
+    .intel-header {
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+    .intel-brand {
+        gap: 10px;
+    }
+
+    .intel-brand h1 {
+        font-size: 22px;
+    }
+
+    .intel-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .intel-lock {
+        width: 18px;
+        height: 18px;
+    }
+
+    .intel-subtitle {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+    .intel-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .intel-card {
+        min-height: 100px;
+        padding: 15px 5px;
+    }
+
+    .intel-card h3 {
+        font-size: 10px;
+        letter-spacing: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .intel-card p {
+        display: none;
+    }
+
+    .intel-card svg {
+        width: 27px;
+        height: 27px;
+        margin-bottom: 12px;
+    }
+
+    .intel-status {
+        font-size: 9px;
+    }
+
+    .intel-access h2 {
+        font-size: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .intel-card {
+        transition: none;
+    }
+
+    .intel-card:hover {
+        transform: none;
+    }
+}

@@ -593,6 +593,14 @@
                     </a>
 
                     <a class="spt-shell-action"
+   href="{% url 'intelligence:home' %}"
+   {% if request.resolver_match.namespace == 'intelligence' %}
+       aria-current="page"
+   {% endif %}>
+    Intelligence
+</a>
+
+                    <a class="spt-shell-action"
                        href="{% url 'apropos' %}"
                        {% if request.resolver_match.url_name == 'apropos' %}aria-current="page"{% endif %}>
                         À propos

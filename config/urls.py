@@ -52,6 +52,9 @@ urlpatterns = [
     # Recommandations
     # -------------------------------------------------------------------------
     path("", include("apps.recommendations.urls")),
+    
+    # ---- Pr SPTI
+    path("intelligence/", include("apps.intelligence.urls")),
 ]
 
 # -----------------------------------------------------------------------------

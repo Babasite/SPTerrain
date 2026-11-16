@@ -1,0 +1,235 @@
+{% extends "accueil/base.html" %}
+{% load static %}
+
+{% block title %}SPterrain Intelligence{% endblock %}
+
+{% block page_title %}Intelligence{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet"
+      href="{% static 'intelligence/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="intel-page">
+
+    <div class="intel-shell">
+
+        <!-- IDENTITÉ DE LA PLATEFORME -->
+
+        <header class="intel-header">
+
+            <div class="intel-brand">
+
+                <svg class="intel-logo" viewBox="0 0 24 24">
+                    <path d="M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6z"/>
+                    <path d="m8 12 3 3 5-6"/>
+                </svg>
+
+                <div>
+                    <h1>
+                        SPTERRAIN
+                        <span>INTELLIGENCE</span>
+                    </h1>
+
+                    <p class="intel-subtitle">
+                        ONE HEALTH INTELLIGENCE SYSTEM
+                    </p>
+                </div>
+
+            </div>
+
+            <svg class="intel-lock" viewBox="0 0 24 24">
+                <rect x="5" y="10" width="14" height="11" rx="2"/>
+                <path d="M8 10V6a4 4 0 0 1 8 0v4"/>
+                <path d="M12 14v3"/>
+            </svg>
+
+        </header>
+
+        <!-- STATUT -->
+
+        <div class="intel-status">
+            <span class="intel-status-dot"></span>
+            PLATEFORME EN DÉVELOPPEMENT
+        </div>
+
+        <!-- CARTE MONDIALE -->
+
+        <figure class="intel-visual">
+
+            <img
+                src="{% static 'intelligence/images/world-intelligence.png' %}"
+                alt="Illustration conceptuelle d'un système de surveillance mondiale One Health"
+                class="intel-world-map"
+            >
+
+            <figcaption>
+                VISUALISATION CONCEPTUELLE — DONNÉES NON RÉELLES
+            </figcaption>
+
+        </figure>
+
+        <!-- MODULES DE RENSEIGNEMENT -->
+
+        <div class="intel-grid">
+
+            <!-- OSINT -->
+
+            <article class="intel-card">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="10" cy="10" r="7"/>
+                    <path d="m15 15 6 6"/>
+                </svg>
+                <h3>OSINT</h3>
+                <p>Sources ouvertes</p>
+            </article>
+
+            <!-- GEOINT -->
+
+            <article class="intel-card">
+                <svg viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="6" height="6"
+                          transform="rotate(45 12 12)"/>
+                    <path d="m5 3 5 5-4 4-5-5z"/>
+                    <path d="m17 12 5 5-4 4-5-5z"/>
+                    <path d="M3 16a5 5 0 0 1 5 5"/>
+                    <path d="m15 9 5-5"/>
+                </svg>
+                <h3>GEOINT</h3>
+                <p>Renseignement géospatial</p>
+            </article>
+
+            <!-- FIELDINT -->
+
+            <article class="intel-card">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m16 8-3 5-5 3 3-5z"/>
+                </svg>
+                <h3>FIELDINT</h3>
+                <p>Investigation de terrain</p>
+            </article>
+
+            <!-- ONE HEALTH -->
+
+            <article class="intel-card">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/>
+                    <path d="M3 12h5l2-4 3 8 2-4h6"/>
+                </svg>
+                <h3>ONE HEALTH</h3>
+                <p>Veille sanitaire intégrée</p>
+            </article>
+
+            <!-- CYBERINT -->
+
+            <article class="intel-card">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6z"/>
+                    <path d="M12 7v6"/>
+                    <path d="M12 17h.01"/>
+                </svg>
+                <h3>CYBERINT</h3>
+                <p>Renseignement numérique</p>
+            </article>
+
+            <!-- RISKINT -->
+
+            <article class="intel-card">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="12" cy="12" r="6"/>
+                    <circle cx="12" cy="12" r="2"/>
+                    <path d="m12 12 9-9"/>
+                </svg>
+                <h3>RISKINT</h3>
+                <p>Analyse des risques</p>
+            </article>
+
+            <!-- DATAINT -->
+
+            <article class="intel-card">
+                <svg viewBox="0 0 24 24">
+                    <ellipse cx="12" cy="5" rx="8" ry="3"/>
+                    <path d="M4 5v14c0 4 16 4 16 0V5"/>
+                    <path d="M4 12c0 4 16 4 16 0"/>
+                </svg>
+                <h3>DATAINT</h3>
+                <p>Analyse de données</p>
+            </article>
+
+            <!-- AI ENGINE -->
+
+            <article class="intel-card">
+                <svg viewBox="0 0 24 24">
+                    <rect x="5" y="5" width="14" height="14" rx="3"/>
+                    <rect x="9" y="9" width="6" height="6" rx="1"/>
+                    <path d="M9 2v3M15 2v3M9 19v3M15 19v3"/>
+                    <path d="M2 9h3M2 15h3M19 9h3M19 15h3"/>
+                </svg>
+                <h3>AI ENGINE</h3>
+                <p>Intelligence artificielle</p>
+            </article>
+
+            <!-- REPORTS -->
+
+            <article class="intel-card">
+                <svg viewBox="0 0 24 24">
+                    <rect x="4" y="2" width="16" height="20" rx="3"/>
+                    <path d="M8 7h8M8 12h8M8 17h5"/>
+                </svg>
+                <h3>REPORTS</h3>
+                <p>Rapports de renseignement</p>
+            </article>
+
+        </div>
+
+        <!-- PRÉSENTATION -->
+
+        <div class="intel-description">
+
+            <h2>Anticiper. Investiguer. Comprendre.</h2>
+
+            <p>
+                Développement de technologies indépendantes
+                de renseignement sanitaire, animal et
+                environnemental dans une approche One Health.
+            </p>
+
+        </div>
+
+        <!-- ACCÈS PROFESSIONNEL -->
+
+        <div class="intel-access">
+
+            <svg viewBox="0 0 24 24">
+                <rect x="5" y="10" width="14" height="11" rx="2"/>
+                <path d="M8 10V6a4 4 0 0 1 8 0v4"/>
+                <path d="M12 14v3"/>
+            </svg>
+
+            <h2>
+                RESTRICTED ACCESS
+            </h2>
+
+            <p>PROFESSIONAL INTELLIGENCE</p>
+
+            <button type="button" disabled>
+                ACCÈS PROFESSIONNEL
+            </button>
+
+            <small>Prochainement disponible</small>
+
+        </div>
+
+        <div class="intel-footer">
+            © 2026 SPterrain Intelligence
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     "apps.monitoring.apps.MonitoringConfig",
     "apps.recommendations.apps.RecommendationsConfig",
     "apps.tools.apps.ToolsConfig",
+    "apps.intelligence.apps.IntelligenceConfig",
 ]
 
 MIDDLEWARE = [
