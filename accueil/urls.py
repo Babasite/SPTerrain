@@ -35,6 +35,7 @@ urlpatterns = [
     path("notice/", views.notice, name="notice"),
     path("outils/", views.outils, name="outils"),
     path("terrain/", views.terrain, name="terrain"),
+    path("services/", views.services, name="services"),
     path("apropos/", views.apropos, name="apropos"),
     path("cv/", views.cv, name="cv"),
     path("pompier/", views.pompier, name="pompier"),

@@ -599,6 +599,11 @@
    {% endif %}>
     Intelligence
 </a>
+<a class="spt-shell-action"
+   href="{% url 'services' %}"
+   {% if request.resolver_match.url_name == 'services' %}aria-current="page"{% endif %}>
+    Services
+</a>
 
                     <a class="spt-shell-action"
                        href="{% url 'apropos' %}"

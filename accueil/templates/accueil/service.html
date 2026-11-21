@@ -1,0 +1,432 @@
+{% extends "accueil/base.html" %}
+
+{% block logo_return %}{% url 'home' %}{% endblock %}
+
+{% block title %}Services | SPterrain{% endblock %}
+
+{% block page_title %}Services{% endblock %}
+
+{% block header_actions %}{% endblock %}
+
+
+{% block extra_css %}
+
+<style>
+
+/* =========================================================
+   SERVICES — IDENTITÉ VISUELLE SPterrain
+   Même présentation que la page À propos
+========================================================= */
+
+.spt-shell-content {
+    background: #fff;
+}
+
+/* Conteneur principal */
+
+.services-container {
+    width: min(1080px, calc(100% - 28px));
+    margin: 10px auto 56px;
+    padding: 0;
+
+    color: var(--spt-texte);
+    font-family: var(--font-family-body);
+    font-size: 1rem;
+    line-height: 1.68;
+}
+
+/* Sections */
+
+.services-section {
+    margin: 0;
+    padding: 24px 0;
+
+    border: 0;
+    border-top: 1px solid rgba(33, 76, 53, .16);
+
+    background: transparent;
+}
+
+.services-section:first-child {
+    padding-top: 8px;
+    border-top: 0;
+}
+
+/* Titres */
+
+.services-section h2 {
+    margin: 0;
+
+    color: var(--spt-vert-fonce);
+    font-family: var(--font-family-title);
+
+    font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Sous-titres */
+
+.services-section h3 {
+    margin: 24px 0 0;
+
+    color: var(--spt-vert-fonce);
+    font-family: var(--font-family-title);
+
+    font-size: clamp(1.08rem, 1.45vw, 1.22rem);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+/* Paragraphes */
+
+.services-section p {
+    max-width: 900px;
+    margin: 8px 0 0;
+
+    color: var(--spt-texte);
+
+    font-size: clamp(1rem, 1.15vw, 1.08rem);
+    line-height: 1.7;
+}
+
+/* Listes */
+
+.services-list {
+    margin: 14px 0 0;
+    padding-left: 22px;
+}
+
+.services-list li {
+    margin-bottom: 9px;
+    line-height: 1.7;
+}
+
+/* Lien de contact */
+
+.services-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 18px;
+
+    color: var(--spt-vert-fonce);
+
+    font-family: var(--font-family-body);
+    font-size: 1rem;
+    font-weight: 700;
+
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+
+    transition: color .2s ease;
+}
+
+.services-contact::before {
+    content: "→";
+}
+
+.services-contact:hover,
+.services-contact:focus-visible {
+    color: var(--spt-vert);
+}
+
+/* Adaptation mobile */
+
+@media (max-width: 520px) {
+
+    .services-container {
+        width: calc(100% - 20px);
+        margin-top: 8px;
+        margin-bottom: 44px;
+    }
+
+    .services-section {
+        padding: 20px 0;
+    }
+
+}
+
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+
+<main class="services-container">
+
+    <!-- PRÉSENTATION -->
+
+    <section class="services-section">
+
+        <h2>Communication scientifique, audiovisuelle et numérique</h2>
+
+        <p>
+            <strong>
+                Prestations indépendantes · Missions ponctuelles · CDD · CDI
+            </strong>
+        </p>
+
+        <p>
+            Je développe une approche transversale
+            de la communication, à la rencontre du journalisme,
+            de la santé publique, de l'environnement
+            et des technologies numériques.
+        </p>
+
+        <p>
+            L'objectif est de concevoir et de produire
+            des contenus rigoureux, accessibles et adaptés
+            à différents publics, notamment autour
+            des enjeux One Health.
+        </p>
+
+        <p>
+            Cette démarche associe recherche documentaire,
+            rédaction, production audiovisuelle
+            et conception de supports numériques,
+            afin d'accompagner un projet de communication
+            depuis sa préparation jusqu'à sa diffusion.
+        </p>
+
+    </section>
+
+
+    <!-- COMMUNICATION GLOBALE -->
+
+    <section class="services-section">
+
+        <h2>Communication et production de contenus</h2>
+
+        <p>
+            Je propose une approche intégrée
+            de la communication scientifique,
+            sanitaire et environnementale.
+        </p>
+
+        <p>
+            Selon les besoins, un projet peut réunir
+            plusieurs formats complémentaires :
+            articles, photographies, reportages vidéo,
+            contenus pour les réseaux sociaux
+            et supports web.
+        </p>
+
+        <ul class="services-list">
+            <li>Recherche et préparation éditoriale</li>
+            <li>Conception de contenus de communication</li>
+            <li>Rédaction d'articles et de dossiers</li>
+            <li>Production photographique et audiovisuelle</li>
+            <li>Adaptation des contenus aux supports numériques</li>
+            <li>Publication et actualisation de contenus web</li>
+        </ul>
+
+    </section>
+
+
+    <!-- SITES WEB -->
+
+    <section class="services-section">
+
+        <h2>Création de sites web et communication numérique</h2>
+
+        <p>
+            Un site internet constitue un support central
+            pour présenter une activité, valoriser des projets,
+            diffuser des informations et réunir différents
+            contenus éditoriaux et audiovisuels.
+        </p>
+
+        <p>
+            Je développe des compétences
+            en conception et développement web,
+            avec l'objectif de proposer une communication
+            complète : création du support numérique,
+            production des contenus et accompagnement
+            de leur publication.
+        </p>
+
+        <ul class="services-list">
+            <li>Conception de l'organisation et de l'arborescence d'un site</li>
+            <li>Création de pages de présentation et de rubriques éditoriales</li>
+            <li>Intégration d'articles, de photographies et de vidéos</li>
+            <li>Création de contenus adaptés à la publication web</li>
+            <li>Mise à jour et enrichissement des contenus</li>
+            <li>Développement progressif de fonctionnalités numériques adaptées aux projets</li>
+        </ul>
+
+        <p>
+            Les prestations de développement web
+            sont étudiées en fonction des besoins,
+            de leur complexité et des compétences
+            techniques disponibles.
+        </p>
+
+    </section>
+
+
+    <!-- REPORTAGE -->
+
+    <section class="services-section">
+
+        <h2>Reportage et production audiovisuelle</h2>
+
+        <p>
+            Conception et réalisation de contenus audiovisuels
+            consacrés aux questions scientifiques, sanitaires
+            et environnementales.
+        </p>
+
+        <p>
+            Le reportage permet de documenter les réalités
+            de terrain, de recueillir des témoignages
+            et de rendre visibles les enjeux
+            abordés.
+        </p>
+
+        <ul class="services-list">
+            <li>Reportages de terrain</li>
+            <li>Interviews et témoignages</li>
+            <li>Prises de vues et tournage</li>
+            <li>Montage et réalisation vidéo</li>
+            <li>Production de contenus audiovisuels pour le web</li>
+        </ul>
+
+    </section>
+
+
+    <!-- JOURNALISME -->
+
+    <section class="services-section">
+
+        <h2>Journalisme et rédaction scientifique</h2>
+
+        <p>
+            Recherche, traitement et mise en forme
+            d'informations scientifiques et médicales.
+        </p>
+
+        <p>
+            L'objectif est de rendre accessibles
+            des sujets parfois complexes, tout en préservant
+            la rigueur des informations et la précision
+            des connaissances présentées.
+        </p>
+
+        <ul class="services-list">
+            <li>Rédaction d'articles</li>
+            <li>Recherche et vérification documentaire</li>
+            <li>Interviews de spécialistes</li>
+            <li>Vulgarisation scientifique et médicale</li>
+            <li>Création de contenus éditoriaux</li>
+            <li>Rédaction de contenus pour les sites web</li>
+        </ul>
+
+    </section>
+
+
+    <!-- VEILLE -->
+
+    <section class="services-section">
+
+        <h2>Veille scientifique et sanitaire</h2>
+
+        <p>
+            Recherche, sélection et synthèse d'informations
+            issues de publications scientifiques
+            et de sources institutionnelles.
+        </p>
+
+        <p>
+            Cette activité peut contribuer
+            à documenter un sujet, à suivre
+            l'évolution des connaissances
+            ou à préparer des contenus de communication.
+        </p>
+
+        <ul class="services-list">
+            <li>Veille documentaire</li>
+            <li>Suivi de thématiques sanitaires et environnementales</li>
+            <li>Recherche de publications scientifiques</li>
+            <li>Synthèses d'informations</li>
+            <li>Approche One Health</li>
+        </ul>
+
+    </section>
+
+
+    <!-- APPROCHE INTÉGRÉE -->
+
+    <section class="services-section">
+
+        <h2>Une approche globale, du terrain au web</h2>
+
+        <p>
+            L'originalité de cette démarche repose
+            sur la complémentarité des compétences
+            mobilisées : comprendre un sujet scientifique,
+            rechercher et vérifier les informations,
+            enquêter, interviewer, filmer, rédiger,
+            puis organiser et diffuser les contenus
+            sur des supports numériques.
+        </p>
+
+        <p>
+            Un même projet peut ainsi associer
+            un reportage, des articles,
+            des photographies, des vidéos
+            et un site internet destiné
+            à réunir et valoriser ces productions.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="services-section">
+
+        <h2>Un projet, une mission ou un recrutement ?</h2>
+
+        <p>
+            Vous représentez une association,
+            une structure de santé,
+            un organisme scientifique,
+            une organisation environnementale
+            ou souhaitez développer
+            un projet de communication ?
+        </p>
+
+        <p>
+            Vous pouvez me contacter pour échanger
+            sur vos besoins : reportage,
+            rédaction scientifique, production vidéo,
+            création de contenus ou projet de site web.
+        </p>
+
+        <p>
+            Je suis également ouvert aux collaborations
+            ponctuelles, aux prestations indépendantes
+            et aux opportunités professionnelles
+            en CDD ou en CDI, dans les domaines
+            de la communication, du journalisme,
+            de l'audiovisuel et du numérique.
+        </p>
+        <p>
+    Les modalités de collaboration sont définies
+    selon la nature du projet et le cadre contractuel retenu.
+</p>
+
+        <a href="{% url 'contact' %}"
+           class="services-contact">
+            Me contacter
+        </a>
+
+    </section>
+
+</main>
+
+{% endblock %}

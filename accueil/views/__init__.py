@@ -35,6 +35,7 @@ apps/monitoring/views.py.
 from .Home import *
 from .Outils import *
 from .terrain import *
+from .service import *
 from .Apropos import *
 from .Accueil import *
 from .sauver import *
