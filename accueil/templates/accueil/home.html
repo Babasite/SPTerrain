@@ -263,6 +263,23 @@
     transition:none;
 }
 }
+/* Phrase de présentation sous le bandeau */
+.presentation-spt {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 20px;
+
+    color: var(--spt-vert-fonce);
+    font-family: var(--font-family-title);
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    z-index: 2;
+}
 </style>
 {% endblock %}
 
@@ -273,6 +290,9 @@
 </section>
 
 <section class="vitrine" aria-label="Présentation des contenus du site">
+    <p class="presentation-spt">
+    Un site indépendant qui met mes compétences en santé, information et numérique à votre service.
+</p>
 <div class="vitrine__cadre" id="vitrine-vivante">
 
 <div class="vitrine__texte" aria-live="polite">
