@@ -352,18 +352,12 @@
     }
 }
 
-
-/* ==========================================================
-   ENCADRÉS LÉGERS — JOURNAL + CONSEILS & TESTS
-   ========================================================== */
-
-.notice-section:nth-child(1) .notice-section__content p,
-.notice-section:nth-child(3) .notice-section__content p{
-    padding:14px 18px;
-    border:1px solid rgba(239,227,195,.95);
-    border-radius:12px;
-    background:rgba(239,227,195,.22);
+@media (min-width: 761px) {
+    .notice-section__content {
+        transform: translateX(-150px);
+    }
 }
+
 
 </style>
 {% endblock %}
