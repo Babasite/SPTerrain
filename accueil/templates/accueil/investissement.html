@@ -322,6 +322,59 @@
         text-underline-offset: 3px;
     }
 
+    /* ==========================================================
+   EN BREF — PYRAMIDE PATRIMONIALE
+   ========================================================== */
+
+.invest-summary {
+    max-width: 760px;
+    margin: 28px auto;
+    padding: 28px 20px;
+    border: 1px solid rgba(33, 76, 53, .18);
+    border-radius: 12px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.invest-summary-title {
+    margin: 0;
+    color: var(--spt-vert-fonce);
+    font-family: var(--font-family-title);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.invest-summary-intro {
+    margin: 10px 0 24px;
+    color: #556159;
+    font-size: .95rem;
+    line-height: 1.6;
+}
+
+.invest-pyramid {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    font-family: var(--font-family-body);
+}
+
+.invest-summary-note {
+    max-width: 500px;
+    margin: 20px auto 0;
+    color: #556159;
+    font-size: .88rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 620px) {
+    .invest-summary {
+        padding: 22px 10px;
+        margin: 22px 0;
+    }
+}
+
     @media (max-width: 900px) {
         .invest-grid,
         .invest-grid--4 {
@@ -369,81 +422,398 @@
                 J'ai de l'argent, j'en fais quoi ?
             </h1>
 
+      <!-- EN BREF : PYRAMIDE PATRIMONIALE -->
+
+<section class="invest-summary"
+         aria-labelledby="invest-summary-title"
+         style="max-width: none;
+                width: 125%;
+                margin-left: 0;
+                margin-right: 0;
+                box-sizing: border-box;">
+
+    <style>
+        .invest-pyramid-box {
+            padding: 8px 12px;
+            border: 1px solid #214c35;
+            border-radius: 8px;
+            color: #214c35;
+            font-size: 16px;
+            line-height: 1.4;
+            text-align: left;
+            box-sizing: border-box;
+            overflow-wrap: anywhere;
+            height: auto;
+            min-height: 65px;
+        }
+
+        .invest-pyramid-box strong {
+            display: block;
+            font-size: 24px;
+            line-height: 1;
+            margin-bottom: 3px;
+        }
+    </style>
+
+    <h2 class="invest-summary-title"
+        id="invest-summary-title">
+        En bref
+    </h2>
+
+    <p class="invest-summary-intro">
+        Construire et répartir son patrimoine (Actualisé le 25/11/2026)<br>
+        
+    </p>
+
+    <svg class="invest-pyramid"
+         viewBox="0 0 1380 660"
+         style="width: 100%;
+                max-width: none;
+                height: auto;
+                display: block;
+                margin-left: 0;"
+         role="img"
+         aria-labelledby="pyramid-title pyramid-desc">
+
+        <title id="pyramid-title">
+            Pyramide de répartition patrimoniale
+        </title>
+
+        <desc id="pyramid-desc">
+            10 % de matelas de sécurité,
+            80 % d'immobilier et de bourse,
+            5 % de crypto-actifs et
+            5 % d'actifs alternatifs.
+        </desc>
+
+
+        <!-- ==========================================
+             NIVEAU 4 : ACTIFS ALTERNATIFS — 5 %
+             ========================================== -->
+
+        <polygon
+            points="240,4 317,184 163,184"
+            fill="#214c35"
+        />
+
+        <g fill="#ffffff" text-anchor="middle">
+
+    <text x="240" y="102"
+          font-size="15"
+          font-weight="700">
+        Actifs
+    </text>
+
+    <text x="240" y="120"
+          font-size="15"
+          font-weight="700">
+        alternatifs
+    </text>
+
+    <text x="240" y="140"
+          font-size="12">
+        Private equity
+    </text>
+
+    <text x="240" y="157"
+          font-size="12">
+        Objets de collection
+    </text>
+
+    <text x="240" y="174"
+          font-size="12">
+        Or et argent physiques
+    </text>
+
+</g>
+
+        <!-- Flèche -->
+
+        <path
+            d="M307 135 H512 V125 L530 141 L512 157 V147 H307 Z"
+            fill="#214c35"
+        />
+
+        <!-- Rectangle : actifs alternatifs -->
+
+        <foreignObject x="540" y="95"
+                       width="830" height="90">
+
+            <div xmlns="http://www.w3.org/1999/xhtml"
+                 class="invest-pyramid-box">
+
+                <strong>5 %</strong>
+
+                En <u>"protection contre les crises 
+                extrêmes"</u> (guerre...) Exemple: 5 000- 10 000 € (en banque+++ 
+                -> plus sécure que chez soi.)
+
+            </div>
+
+        </foreignObject>
+
+
+        <!-- ==========================================
+             NIVEAU 3 : CRYPTO — 5 %
+             ========================================== -->
+
+        <polygon
+            points="160,191 320,191 363,292 117,292"
+            fill="#347b6b"
+        />
+
+        <g fill="#ffffff" text-anchor="middle">
+
+            <text x="240" y="249"
+                  font-size="20"
+                  font-weight="700">
+                Crypto
+            </text>
+
+            <text x="240" y="274"
+                  font-size="15">
+                (BTC et ETH)
+            </text>
+
+        </g>
+
+        <!-- Flèche -->
+
+        <path
+            d="M350 236 H512 V226 L530 242 L512 258 V248 H350 Z"
+            fill="#347b6b"
+        />
+
+        <!-- Rectangle : crypto -->
+
+        <foreignObject x="540" y="197"
+                       width="830" height="90">
+
+            <div xmlns="http://www.w3.org/1999/xhtml"
+                 class="invest-pyramid-box"
+                 style="border-color: #347b6b;
+                        color: #347b6b;">
+
+                <strong>5 %</strong>
+
+                Déjà avoir le reste... 😂
+
+            </div>
+
+        </foreignObject>
+
+
+        <!-- ==========================================
+             NIVEAU 2 : IMMOBILIER ET BOURSE — 80 %
+             ========================================== -->
+
+        <polygon
+            points="114,299 366,299 432,535 48,535"
+            fill="#c5ded0"
+        />
+
+        <g fill="#214c35" text-anchor="middle">
+
+            <!-- Séparation verticale -->
+
+            <line x1="240" y1="365"
+                  x2="240" y2="475"
+                  stroke="#214c35"
+                  stroke-opacity=".25"
+            />
+
+            <!-- Immobilier -->
+
+            <text x="150" y="385"
+                  font-size="21"
+                  font-weight="700">
+                Immobilier
+            </text>
+
+            <text x="150" y="408"
+                  font-size="13">
+                Résidence principale
+            </text>
+
+            <text x="150" y="427"
+                  font-size="13">
+                Immobilier locatif
+            </text>
+
+            <text x="150" y="446"
+                  font-size="13">
+                Pierre-papier (SCPI...)
+            </text>
+
+            <!-- Bourse -->
+
+            <text x="330" y="385"
+                  font-size="21"
+                  font-weight="700">
+                Bourse
+            </text>
+
+            <text x="330" y="408"
+                  font-size="13">
+                ETF sur PEA
+            </text>
+
+            <text x="330" y="427"
+                  font-size="13">
+                Assurance-vie, PER, PEE
+            </text>
+
+            <text x="330" y="446"
+                  font-size="13">
+                Actions US sur CTO
+            </text>
+
+        </g>
+
+        <!-- Flèche -->
+
+        <path
+            d="M404 411 H512 V401 L530 417 L512 433 V423 H404 Z"
+            fill="#c5ded0"
+        />
+
+        <!-- Rectangle : immobilier et bourse -->
+
+        <foreignObject x="540" y="305"
+                       width="830" height="230">
+
+            <div xmlns="http://www.w3.org/1999/xhtml"
+                 class="invest-pyramid-box"
+                 style="border-color: #c5ded0;">
+
+                <strong>80 %</strong>
+
+                <u>Pr revenus passifs</u><br>
+
+                Immobilier locatif (Emmerdes💩).<br>
+
+                SCPI de rendement à capital fixe, détenue en direct, en
+                pleine propriété et sans crédit (pas à gérer ms plus
+                difficile à revendre).<br>
+
+                ETF d'actions distribuant (équivalent en bourse).<br>
+
+                <u>Pr fructifier à long terme</u><br>
+
+                Assurance vie (fonds en euros++ (sécure),
+                unités de compte (risqué)).
+
+            </div>
+
+        </foreignObject>
+
+
+        <!-- ==========================================
+             NIVEAU 1 : MATELAS DE SÉCURITÉ — 10 %
+             ========================================== -->
+
+        <polygon
+            points="45,542 435,542 479,646 1,646"
+            fill="#efe3c3"
+        />
+
+        <g fill="#214c35" text-anchor="middle">
+
+            <text x="240" y="603"
+                  font-size="23"
+                  font-weight="700">
+                Matelas de sécurité
+            </text>
+
+            <text x="240" y="628"
+                  font-size="17">
+                (Livret A, LDDS, LEP)
+            </text>
+
+        </g>
+
+        <!-- Flèche -->
+
+        <path
+            d="M460 588 H512 V578 L530 594 L512 610 V600 H460 Z"
+            fill="#efe3c3"
+        />
+
+        <!-- Rectangle : matelas de sécurité -->
+
+        <foreignObject x="540" y="549"
+                       width="830" height="100">
+
+            <div xmlns="http://www.w3.org/1999/xhtml"
+                 class="invest-pyramid-box"
+                 style="border-color: #efe3c3;">
+
+                <strong>10 %</strong>
+
+                🥇 LEP (2,5 %, 10 000 max), Livret A (22 950 max)
+                = LDDS (12 000 max) 1,7%<br>
+                <u>Matelas de sécurité</u> 20 000 eu (Perte de revenus, urgence, imprévus)<br>
+                <u>Épargne de projets</u> 15 000 eu (Voiture, travaux, gros achats)
+
+            </div>
+
+        </foreignObject>
+
+    </svg>
+
+    <p class="invest-summary-note">
+        Objectif: Moins d'une heure de suivi de cette pyramide chaque mois.
+    </p>
+
+</section>
+
+<!-- Fin de en bref -->
+
             <p class="invest-lead">
-                La première question n'est pas forcément « quel placement rapporte le plus ? ».
-                Il faut d'abord savoir ce que vous possédez, ce que vous devez, quand vous aurez
-                besoin de cet argent et quel niveau de risque vous pouvez réellement supporter.
+                L'objectif est de construire un patrimoine qui permet à la fois
+                de faire face aux imprévus, de financer ses projets, de générer
+                des revenus complémentaires et de préparer l'avenir.
             </p>
 
             <div class="invest-principe">
                 <strong>L'idée :</strong>
-                faire travailler son argent sans perdre de vue le reste.
-                Un patrimoine se pilote dans son ensemble : budget, épargne disponible,
-                dettes, placements, projets, frais et niveau de risque.
+                faire travailler son argent plutôt que passer son temps
+                à travailler pour lui. Construire un patrimoine diversifié,
+                compréhensible, transmissible et nécessitant le moins
+                de gestion possible.
             </div>
+
         </section>
 
 
-        <section class="invest-section">
-            <div class="invest-section-head">
-                <span class="invest-section-number">Avant de choisir un placement</span>
-                <h2 class="invest-section-title">Une logique simple en cinq étapes</h2>
-                <p class="invest-section-text">
-                    Au lieu de partir directement à la recherche du « meilleur investissement »,
-                    commencez par donner une fonction à chaque euro.
-                </p>
-            </div>
-
-            <div class="invest-path">
-                <div class="invest-path-item">
-                    <span class="invest-path-num">01</span>
-                    <span class="invest-path-title">Voir clair</span>
-                    <span class="invest-path-text">Faire la photo complète de votre patrimoine.</span>
-                </div>
-
-                <div class="invest-path-item">
-                    <span class="invest-path-num">02</span>
-                    <span class="invest-path-title">Sécuriser</span>
-                    <span class="invest-path-text">Garder une réserve réellement disponible.</span>
-                </div>
-
-                <div class="invest-path-item">
-                    <span class="invest-path-num">03</span>
-                    <span class="invest-path-title">Définir un objectif</span>
-                    <span class="invest-path-text">Court, moyen ou long terme.</span>
-                </div>
-
-                <div class="invest-path-item">
-                    <span class="invest-path-num">04</span>
-                    <span class="invest-path-title">Répartir</span>
-                    <span class="invest-path-text">Choisir plusieurs supports adaptés.</span>
-                </div>
-
-                <div class="invest-path-item">
-                    <span class="invest-path-num">05</span>
-                    <span class="invest-path-title">Suivre</span>
-                    <span class="invest-path-text">Frais, évolution, risque et objectifs.</span>
-                </div>
-            </div>
-        </section>
-
+        <!-- ==========================================================
+             PATRIMOINE NET
+             ========================================================== -->
 
         <section class="invest-section">
+
             <div class="invest-section-head">
-                <span class="invest-section-number">Étape 1</span>
-                <h2 class="invest-section-title">Commencer par votre patrimoine net</h2>
+                <span class="invest-section-number">Avant de commencer</span>
+
+                <h2 class="invest-section-title">
+                    Calculer son patrimoine net
+                </h2>
+
                 <p class="invest-section-text">
-                    Additionnez ce que vous possédez, puis retirez ce que vous devez.
-                    Cette vision globale évite de regarder un placement isolément.
+                    Additionner ce que l'on possède, puis retirer ce que
+                    l'on doit. C'est à partir de cette vision globale que
+                    l'on peut construire une répartition cohérente.
                 </p>
             </div>
 
             <div class="invest-grid invest-grid--4">
+
                 <article class="invest-card invest-card--soft">
                     <p class="invest-card-kicker">Disponible</p>
-                    <h3 class="invest-card-title">Comptes & liquidités</h3>
+                    <h3 class="invest-card-title">Comptes et liquidités</h3>
                     <p class="invest-card-text">
-                        Compte courant, livrets et argent immédiatement mobilisable.
+                        Comptes courants, livrets et argent immédiatement
+                        disponible.
                     </p>
                 </article>
 
@@ -451,608 +821,1705 @@
                     <p class="invest-card-kicker">Placements</p>
                     <h3 class="invest-card-title">Épargne investie</h3>
                     <p class="invest-card-text">
-                        PEA, assurance-vie, PER, compte-titres, épargne salariale, etc.
+                        PEA, CTO, assurance-vie, PER, PEE et autres
+                        placements financiers.
                     </p>
                 </article>
 
                 <article class="invest-card">
                     <p class="invest-card-kicker">Autres actifs</p>
-                    <h3 class="invest-card-title">Immobilier & autres biens</h3>
+                    <h3 class="invest-card-title">Immobilier et autres biens</h3>
                     <p class="invest-card-text">
-                        Immobilier, parts de sociétés, métaux, crypto-actifs ou autres actifs.
+                        Résidence principale, immobilier locatif, SCPI,
+                        métaux précieux, crypto-actifs et autres biens.
                     </p>
                 </article>
 
                 <article class="invest-card invest-card--soft">
                     <p class="invest-card-kicker">À déduire</p>
-                    <h3 class="invest-card-title">Dettes & emprunts</h3>
+                    <h3 class="invest-card-title">Dettes et emprunts</h3>
                     <p class="invest-card-text">
-                        Crédit immobilier, crédit à la consommation et autres sommes restant dues.
+                        Capital restant dû des crédits immobiliers,
+                        crédits à la consommation et autres dettes.
                     </p>
                 </article>
+
             </div>
+
+            <div class="invest-alert">
+                <strong>Patrimoine net = valeur des actifs − dettes.</strong>
+                <br>
+                Les pourcentages de la pyramide représentent un exemple
+                personnel de répartition patrimoniale et non une règle
+                applicable à tout le monde.
+            </div>
+
         </section>
 
 
+        <!-- ==========================================================
+             NIVEAU 1 — MATELAS DE SÉCURITÉ
+             ========================================================== -->
+
         <section class="invest-section">
+
             <div class="invest-section-head">
-                <span class="invest-section-number">Étape 2</span>
-                <h2 class="invest-section-title">Avant d'investir : conserver une zone de sécurité</h2>
+
+                <span class="invest-section-number">
+                    Niveau 1 — Matelas de sécurité
+                </span>
+
+                <h2 class="invest-section-title">
+                    Sécuriser avant d'investir
+                </h2>
+
                 <p class="invest-section-text">
-                    L'argent destiné aux dépenses imprévues ne devrait pas dépendre de la hausse
-                    ou de la baisse des marchés. Une épargne de précaution disponible permet
-                    d'éviter de devoir vendre un investissement au mauvais moment.
+                    L'argent nécessaire aux imprévus et aux projets proches
+                    ne doit pas dépendre des fluctuations de la bourse
+                    ou du marché immobilier. Il doit rester disponible
+                    rapidement.
                 </p>
+
             </div>
 
             <div class="invest-grid">
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">🥇 LEP</p>
+                    <h3 class="invest-card-title">
+                        Livret d'épargne populaire
+                    </h3>
+                    <p class="invest-card-text">
+                        Accessible sous conditions de revenus.
+                        Capital garanti par l'État, argent disponible
+                        et intérêts exonérés d'impôt sur le revenu
+                        et de prélèvements sociaux.
+                    </p>
+                    <span class="invest-card-note">
+                        Plafond de versements : 10 000 €.
+                    </span>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Livret A</p>
+                    <h3 class="invest-card-title">
+                        La réserve de base
+                    </h3>
+                    <p class="invest-card-text">
+                        Capital garanti par l'État, argent disponible
+                        à tout moment et intérêts exonérés d'impôt
+                        sur le revenu et de prélèvements sociaux.
+                    </p>
+                    <span class="invest-card-note">
+                        Plafond de versements : 22 950 €.
+                    </span>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">LDDS</p>
+                    <h3 class="invest-card-title">
+                        Un complément au Livret A
+                    </h3>
+                    <p class="invest-card-text">
+                        Livret de développement durable et solidaire.
+                        Même taux que le Livret A, capital garanti
+                        et argent disponible.
+                    </p>
+                    <span class="invest-card-note">
+                        Plafond de versements : 12 000 €.
+                    </span>
+                </article>
+
+            </div>
+
+            <div class="invest-grid">
+
                 <article class="invest-card">
                     <p class="invest-card-kicker">Imprévus</p>
-                    <h3 class="invest-card-title">Épargne de précaution</h3>
+                    <h3 class="invest-card-title">
+                        Épargne de précaution
+                    </h3>
                     <p class="invest-card-text">
-                        Une somme disponible rapidement pour absorber une panne, une dépense
-                        urgente ou une baisse temporaire de revenus.
+                        Perte de revenus, panne de voiture, urgence,
+                        problème de santé ou dépense imprévue.
+                        Cette réserve évite de devoir vendre ses
+                        investissements au mauvais moment.
                     </p>
+                    <span class="invest-card-note">
+                        Exemple d' objectif : 20 000 €.
+                    </span>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Projets</p>
+                    <h3 class="invest-card-title">
+                        Épargne de projets
+                    </h3>
+                    <p class="invest-card-text">
+                        Changement de voiture, travaux, équipement,
+                        vacances ou autres dépenses importantes
+                        prévues dans les prochaines années.
+                    </p>
+                    <span class="invest-card-note">
+                        Exemple d'objectif : 15 000 €.
+                    </span>
                 </article>
 
                 <article class="invest-card">
                     <p class="invest-card-kicker">Budget</p>
-                    <h3 class="invest-card-title">Capacité d'épargne</h3>
+                    <h3 class="invest-card-title">
+                        Capacité d'épargne
+                    </h3>
                     <p class="invest-card-text">
-                        Mesurer ce qui reste réellement chaque mois après les dépenses,
-                        plutôt que d'investir une somme difficile à tenir dans la durée.
+                        Identifier ce qu'il reste réellement chaque mois
+                        après les dépenses et les remboursements de crédits.
+                        Investir une somme compatible avec son niveau de vie.
                     </p>
                 </article>
 
-                <article class="invest-card">
-                    <p class="invest-card-kicker">Crédits</p>
-                    <h3 class="invest-card-title">Regarder le coût de ses dettes</h3>
-                    <p class="invest-card-text">
-                        Avant de chercher du rendement, comparez-le au coût certain des dettes
-                        que vous supportez déjà.
-                    </p>
-                </article>
             </div>
+
+            <div class="invest-alert">
+                <strong>Le montant nécessaire dépend de chacun.</strong>
+                Les revenus, les charges, la stabilité professionnelle,
+                la situation familiale et les projets déterminent
+                le montant de la réserve à conserver.
+                Il n'est pas obligatoire de remplir tous ses livrets
+                avant de commencer à investir.
+            </div>
+
         </section>
 
 
-        <section class="invest-section">
-            <div class="invest-section-head">
-                <span class="invest-section-number">Étape 3</span>
-                <h2 class="invest-section-title">Donner un objectif à l'argent</h2>
-                <p class="invest-section-text">
-                    Le bon support dépend surtout de l'échéance. L'argent d'un projet dans deux ans
-                    ne se gère pas comme celui destiné à la retraite dans trente ans.
-                </p>
-            </div>
-
-            <div class="invest-table-wrap">
-                <table class="invest-table">
-                    <thead>
-                        <tr>
-                            <th>Besoin</th>
-                            <th>Horizon</th>
-                            <th>Priorité</th>
-                            <th>Exemples de supports à étudier</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Imprévu / réserve</td>
-                            <td>Immédiat</td>
-                            <td>Disponibilité et sécurité</td>
-                            <td>Livret réglementé, épargne bancaire disponible</td>
-                        </tr>
-                        <tr>
-                            <td>Projet proche</td>
-                            <td>Quelques années</td>
-                            <td>Préserver l'argent nécessaire au projet</td>
-                            <td>Supports prudents adaptés à la durée du projet</td>
-                        </tr>
-                        <tr>
-                            <td>Constitution de patrimoine</td>
-                            <td>Long terme</td>
-                            <td>Diversification et croissance</td>
-                            <td>PEA, assurance-vie, fonds ou ETF diversifiés selon votre profil</td>
-                        </tr>
-                        <tr>
-                            <td>Retraite</td>
-                            <td>Très long terme</td>
-                            <td>Planifier et investir régulièrement</td>
-                            <td>PER, PEA, assurance-vie et autres supports selon la situation</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
+        <!-- ==========================================================
+             NIVEAU 2 — IMMOBILIER
+             ========================================================== -->
 
         <section class="invest-section">
+
             <div class="invest-section-head">
-                <span class="invest-section-number">Étape 4</span>
-                <h2 class="invest-section-title">Ne pas confondre enveloppe et investissement</h2>
+
+                <span class="invest-section-number">
+                    Niveau 2 — Immobilier
+                </span>
+
+                <h2 class="invest-section-title">
+                    Construire un patrimoine grâce à l'immobilier
+                </h2>
+
                 <p class="invest-section-text">
-                    PEA, assurance-vie, PER ou compte-titres sont des cadres qui permettent
-                    de détenir différents placements. Le niveau de risque dépend surtout
-                    de ce que vous mettez à l'intérieur.
+                    L'immobilier permet de détenir un bien tangible,
+                    de se loger, de percevoir des loyers ou de constituer
+                    progressivement un patrimoine grâce au crédit.
+                    Mais attention, la loi est <u>extremement 
+                    défavorable aux bailleurs</u> au nom du "droit au 
+                    logement". 
                 </p>
+
             </div>
 
             <div class="invest-grid">
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Résidence principale</p>
+                    <h3 class="invest-card-title">
+                        Se loger et constituer un patrimoine
+                    </h3>
+                    <p class="invest-card-text">
+                        Être propriétaire de son logement permet de
+                        constituer un patrimoine immobilier et, une fois
+                        le crédit remboursé, de ne plus payer de loyer.
+                        Les charges, les taxes et l'entretien restent dus.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Immobilier locatif</p>
+                    <h3 class="invest-card-title">
+                        Percevoir des loyers
+                    </h3>
+                    <p class="invest-card-text">
+                        Acheter un logement pour le louer et percevoir
+                        des revenus. Le bien peut également prendre
+                        de la valeur au fil du temps, sans garantie.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Pierre-papier</p>
+                    <h3 class="invest-card-title">
+                        Investir sans gérer directement
+                    </h3>
+                    <p class="invest-card-text">
+                        Acheter des parts de SCPI pour investir
+                        indirectement dans plusieurs immeubles
+                        et déléguer leur gestion à une société
+                        spécialisée.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================================
+             IMMOBILIER LOCATIF — AVANTAGES ET RISQUES
+             ========================================================== -->
+
+        <section class="invest-section">
+
+            <div class="invest-section-head">
+
+                <span class="invest-section-number">
+                    Immobilier locatif
+                </span>
+
+                <h2 class="invest-section-title">
+                    Les avantages et les risques de la location
+                </h2>
+
+                <p class="invest-section-text">
+                    L'immobilier locatif peut constituer un excellent
+                    outil patrimonial, notamment grâce au crédit.
+                    Mais la promesse de revenus passifs affiché sur le papier ne 
+                    correspond
+                    pas toujours à la réalité (impayés de loyers, dégradations, 
+                    refus de quitter
+                    les lieux, procédures judiciaires... ).<br>
+                    Dans la pratique, il peut souvent générer du stress,
+                     des dépenses, des démarches administratives et 
+                     judiciaires, ainsi qu'une importante perte de temps,
+                     de sommeil et une odieuse charge mentale.
+                </p>
+
+            </div>
+
+            <div class="invest-grid">
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Avantage</p>
+                    <h3 class="invest-card-title">
+                        L'effet de levier du crédit
+                    </h3>
+                    <p class="invest-card-text">
+                        Un emprunt permet d'acquérir un bien sans disposer
+                        immédiatement de la totalité de son prix.
+                        Les loyers peuvent contribuer au remboursement
+                        du crédit.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Avantage</p>
+                    <h3 class="invest-card-title">
+                        Un revenu complémentaire
+                    </h3>
+                    <p class="invest-card-text">
+                        Une fois le crédit remboursé, les loyers peuvent
+                        constituer une source de revenus complémentaires,
+                        après déduction des charges et de la fiscalité.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Avantage</p>
+                    <h3 class="invest-card-title">
+                        Un patrimoine transmissible
+                    </h3>
+                    <p class="invest-card-text">
+                        Le bien immobilier peut être conservé,
+                        revendu, donné ou transmis à ses héritiers,
+                        selon les règles applicables.
+                    </p>
+                </article>
+
+            </div>
+
+
+            <div class="invest-alert">
+
+                <h3 class="invest-card-title">
+                   
+                </h3>
+
+                <p>
+                    Il existe 
+                    d'autres solutions, notamment les SCPI
+                    et les ETF distribuants, pour continuer à percevoir
+                    des revenus sans avoir à gérer directement
+                    des locataires.
+                </p>
+
+                <p>
+                    Ces placements présentent eux aussi des risques,
+                    mais permettent de s'affranchir des contraintes
+                    de la gestion locative directe.
+                </p>
+
+            </div>
+
+
+            <!-- LES RISQUES -->
+
+            <div class="invest-grid">
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Vacance et impayés
+                    </h3>
+                    <p class="invest-card-text">
+                        Un logement vide ou un locataire qui ne paie
+                        plus son loyer ne génère aucun revenu.
+                        Les charges, les taxes et les éventuels
+                        remboursements de crédit continuent.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Dégradations du logement
+                    </h3>
+                    <p class="invest-card-text">
+                        Un logement peut être récupéré dans un état
+                        nécessitant des travaux importants.
+                        Le dépôt de garantie ne suffit pas toujours
+                        à couvrir les dépenses.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Procédures judiciaires
+                    </h3>
+                    <p class="invest-card-text">
+                        Les conflits avec les locataires peuvent
+                        nécessiter des démarches longues et coûteuses,
+                        notamment en cas d'impayés ou de refus
+                        de quitter les lieux.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Travaux et dépenses imprévues
+                    </h3>
+                    <p class="invest-card-text">
+                        Chaudière, toiture, copropriété, rénovation
+                        énergétique, remise en état, assurance
+                        et taxe foncière réduisent le rendement réel.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Manque de liquidité
+                    </h3>
+                    <p class="invest-card-text">
+                        On ne revend pas une pièce de son appartement
+                        pour récupérer 5 000 €. Une vente peut prendre
+                        plusieurs mois et nécessiter une baisse du prix.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Concentration du patrimoine
+                    </h3>
+                    <p class="invest-card-text">
+                        Un seul appartement peut représenter une part
+                        importante du patrimoine. Un problème local
+                        ou une baisse du marché peut donc avoir
+                        des conséquences importantes.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Le crédit fonctionne dans les deux sens
+                    </h3>
+                    <p class="invest-card-text">
+                        L'effet de levier amplifie les gains potentiels,
+                        mais aussi les difficultés. Même si les loyers
+                        ne rentrent plus, le crédit reste à rembourser.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Temps et charge mentale
+                    </h3>
+                    <p class="invest-card-text">
+                        Recherche de locataires, états des lieux,
+                        appels, réparations, déclarations fiscales
+                        et gestion des conflits. Le revenu n'est
+                        pas toujours aussi passif qu'espéré.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Fiscalité et réglementation
+                    </h3>
+                    <p class="invest-card-text">
+                        Les règles fiscales, les obligations du bailleur
+                        et les exigences énergétiques peuvent évoluer
+                        et modifier la rentabilité d'un investissement.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="invest-alert">
+                <strong>Le rendement réel :</strong>
+                il faut tenir compte des loyers réellement encaissés,
+                des charges, des travaux, des impayés, des périodes
+                sans locataire, des frais de gestion, du financement
+                et de la fiscalité. Le temps consacré à la gestion
+                mérite également d'être pris en considération.
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================================
+             SCPI
+             ========================================================== -->
+
+        <section class="invest-section">
+
+            <div class="invest-section-head">
+
+                <span class="invest-section-number">
+                    Niveau 2 — Pierre-papier
+                </span>
+
+                <h2 class="invest-section-title">
+                    Les SCPI : de l'immobilier sans gestion locative directe
+                </h2>
+
+                <p class="invest-section-text">
+                    Une société civile de placement immobilier (SCPI)
+                    collecte l'argent de plusieurs investisseurs
+                    pour acquérir et gérer un patrimoine immobilier.
+                    L'investisseur détient des parts et peut recevoir
+                    une partie des revenus générés.
+                </p>
+
+            </div>
+
+            <div class="invest-grid">
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Avantage</p>
+                    <h3 class="invest-card-title">
+                        Gestion déléguée
+                    </h3>
+                    <p class="invest-card-text">
+                        La société de gestion s'occupe des immeubles,
+                        des locataires, des loyers et des travaux.
+                        L'investisseur ne gère pas directement
+                        les problèmes locatifs.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Avantage</p>
+                    <h3 class="invest-card-title">
+                        Diversification immobilière
+                    </h3>
+                    <p class="invest-card-text">
+                        Possibilité d'investir dans plusieurs immeubles,
+                        plusieurs secteurs d'activité et différentes
+                        zones géographiques.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Avantage</p>
+                    <h3 class="invest-card-title">
+                        Revenus potentiellement réguliers
+                    </h3>
+                    <p class="invest-card-text">
+                        Les SCPI de rendement peuvent distribuer
+                        des revenus mensuels ou trimestriels,
+                        selon leur fonctionnement.
+                        Ces distributions ne sont pas garanties.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="invest-grid">
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Capital fixe</p>
+                    <h3 class="invest-card-title">
+                        SCPI à capital fixe
+                    </h3>
+                    <p class="invest-card-text">
+                        En dehors des augmentations de capital,
+                        les parts s'échangent principalement entre
+                        acheteurs et vendeurs sur un marché secondaire.
+                        Leur prix dépend notamment de l'offre
+                        et de la demande.
+                    </p>
+                    <span class="invest-card-note">
+                        La revente dépend de la présence d'acheteurs.
+                    </span>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Capital variable</p>
+                    <h3 class="invest-card-title">
+                        SCPI à capital variable
+                    </h3>
+                    <p class="invest-card-text">
+                        La société de gestion peut émettre de nouvelles
+                        parts et organiser les retraits selon les règles
+                        de la SCPI. Le prix de souscription est fixé
+                        par la société de gestion dans le cadre
+                        réglementaire applicable.
+                    </p>
+                    <span class="invest-card-note">
+                        La possibilité de retirer son argent
+                        n'est pas garantie.
+                    </span>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Détention</p>
+                    <h3 class="invest-card-title">
+                        En direct et en pleine propriété
+                    </h3>
+                    <p class="invest-card-text">
+                        Détenir directement ses parts permet de percevoir
+                        les distributions éventuelles et de conserver
+                        la propriété des parts. Elles peuvent être
+                        revendues ou transmises.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="invest-grid">
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Baisse des revenus
+                    </h3>
+                    <p class="invest-card-text">
+                        Les loyers encaissés par la SCPI peuvent diminuer.
+                        Les distributions peuvent être réduites
+                        ou suspendues.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Perte en capital
+                    </h3>
+                    <p class="invest-card-text">
+                        La valeur des immeubles et le prix des parts
+                        peuvent baisser. Le capital investi n'est
+                        pas garanti.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Liquidité, frais et fiscalité
+                    </h3>
+                    <p class="invest-card-text">
+                        La revente peut prendre du temps.
+                        Les frais de souscription, de gestion
+                        et la fiscalité peuvent réduire sensiblement
+                        le rendement net.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="invest-alert">
+                <strong>À appronfondir :</strong>
+                Les SCPI de rendement détenues en direct,
+                en pleine propriété et sans crédit, afin de percevoir
+                des revenus sans avoir à gérer directement des locataires.
+                Le choix entre capital fixe et capital variable doit
+                dépendre de la qualité de chaque SCPI, de ses frais,
+                de son patrimoine et de ses conditions de revente.
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================================
+             BOURSE — ACTIONS ET ETF
+             ========================================================== -->
+
+        <section class="invest-section">
+
+            <div class="invest-section-head">
+
+                <span class="invest-section-number">
+                    Niveau 2 — Bourse
+                </span>
+
+                <h2 class="invest-section-title">
+                    Devenir propriétaire d'une partie des entreprises
+                </h2>
+
+                <p class="invest-section-text">
+                    Investir en actions revient à détenir une petite
+                    partie d'une entreprise. L'investissement peut
+                    générer des dividendes et une éventuelle hausse
+                    de la valeur du capital sur le long terme.
+                </p>
+
+            </div>
+
+            <div class="invest-grid">
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Actions individuelles</p>
+                    <h3 class="invest-card-title">
+                        Choisir directement ses entreprises
+                    </h3>
+                    <p class="invest-card-text">
+                        Acheter des actions d'entreprises nécessite
+                        de comprendre leur activité, leur situation
+                        financière et leurs perspectives.
+                        Les dividendes ne sont pas garantis.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">ETF capitalisant</p>
+                    <h3 class="invest-card-title">
+                        Faire fructifier son capital
+                    </h3>
+                    <p class="invest-card-text">
+                        Les dividendes reçus par le fonds sont
+                        réinvestis automatiquement.
+                        Cette approche permet de rechercher
+                        une croissance du patrimoine à long terme
+                        sans percevoir directement les distributions.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">ETF distribuant</p>
+                    <h3 class="invest-card-title">
+                        Percevoir des revenus
+                    </h3>
+                    <p class="invest-card-text">
+                        Le fonds reverse périodiquement tout ou partie
+                        des revenus distribuables aux investisseurs.
+                        Cela permet de percevoir des revenus sans
+                        avoir nécessairement à vendre ses parts.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="invest-alert">
+                <strong>ETF : Exchange Traded Fund.</strong>
+                Un ETF est un fonds coté en bourse.
+                Un ETF indiciel cherche à reproduire un indice.
+                Certains permettent d'investir dans des centaines
+                ou des milliers d'entreprises avec un seul placement.
+                Tous les ETF ne sont cependant pas aussi diversifiés.
+            </div>
+
+            <div class="invest-grid">
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Baisse des marchés
+                    </h3>
+                    <p class="invest-card-text">
+                        La valeur des actions et des ETF peut
+                        fortement diminuer. Le capital investi
+                        n'est pas garanti, même sur le long terme.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Baisse des dividendes
+                    </h3>
+                    <p class="invest-card-text">
+                        Les entreprises peuvent réduire ou supprimer
+                        leurs dividendes. Les revenus des ETF
+                        distribuants peuvent donc également diminuer.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque</p>
+                    <h3 class="invest-card-title">
+                        Psychologie de l'investisseur
+                    </h3>
+                    <p class="invest-card-text">
+                        Acheter après une forte hausse et vendre
+                        dans la panique après une chute peut
+                        dégrader les résultats.
+                        Il faut pouvoir supporter les fluctuations.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="invest-alert">
+                <strong>Attention aux dividendes :</strong>
+                une distribution n'est pas de l'argent créé gratuitement.
+                Elle réduit, toutes choses égales par ailleurs,
+                la valeur de l'action ou du fonds qui la verse.
+                Il faut regarder le rendement total, c'est-à-dire
+                les revenus perçus et l'évolution du capital.
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================================
+             ENVELOPPES D'INVESTISSEMENT
+             ========================================================== -->
+
+        <section class="invest-section">
+
+            <div class="invest-section-head">
+
+                <span class="invest-section-number">
+                    Niveau 2 — Enveloppes d'investissement
+                </span>
+
+                <h2 class="invest-section-title">
+                    Ne pas confondre le contenant et le contenu
+                </h2>
+
+                <p class="invest-section-text">
+                    Un PEA, un CTO, une assurance-vie, un PER ou un PEE
+                    sont des cadres permettant de détenir des placements.
+                    Le niveau de risque dépend notamment de ce que
+                    l'on choisit de mettre à l'intérieur.
+                </p>
+
+            </div>
+
+            <div class="invest-grid">
+
                 <article class="invest-card">
                     <p class="invest-card-kicker">PEA</p>
-                    <h3 class="invest-card-title">Investir à long terme en actions</h3>
+                    <h3 class="invest-card-title">
+                        Plan d'épargne en actions
+                    </h3>
                     <p class="invest-card-text">
-                        Une enveloppe à étudier pour un investissement de long terme en actions
-                        et fonds éligibles, avec une fiscalité spécifique.
-                    </p>
-                </article>
-
-                <article class="invest-card">
-                    <p class="invest-card-kicker">Assurance-vie</p>
-                    <h3 class="invest-card-title">Une enveloppe polyvalente</h3>
-                    <p class="invest-card-text">
-                        Elle peut accueillir des supports plus prudents ou plus exposés aux marchés,
-                        avec des objectifs d'épargne, de transmission ou de long terme.
-                    </p>
-                </article>
-
-                <article class="invest-card">
-                    <p class="invest-card-kicker">PER</p>
-                    <h3 class="invest-card-title">Préparer la retraite</h3>
-                    <p class="invest-card-text">
-                        Un cadre dédié à l'épargne retraite, avec des règles de disponibilité
-                        et une fiscalité qui doivent être comprises avant de verser.
+                        Permet d'investir dans des actions et des fonds
+                        ou ETF éligibles. Après cinq ans, les gains
+                        bénéficient d'une exonération d'impôt sur
+                        le revenu lors des retraits, mais restent
+                        soumis aux prélèvements sociaux.
                     </p>
                 </article>
 
                 <article class="invest-card">
                     <p class="invest-card-kicker">CTO</p>
-                    <h3 class="invest-card-title">Plus de liberté</h3>
+                    <h3 class="invest-card-title">
+                        Compte-titres ordinaire
+                    </h3>
                     <p class="invest-card-text">
-                        Le compte-titres offre un univers d'investissement très large,
-                        mais sans les mêmes règles fiscales que les enveloppes dédiées.
+                        Permet d'accéder à un univers d'investissement
+                        plus large, notamment aux actions américaines
+                        détenues directement et à de nombreux ETF.
+                        Il ne bénéficie pas de l'avantage fiscal du PEA.
                     </p>
                 </article>
 
                 <article class="invest-card">
-                    <p class="invest-card-kicker">Immobilier</p>
-                    <h3 class="invest-card-title">Un actif à part entière</h3>
+                    <p class="invest-card-kicker">Assurance-vie</p>
+                    <h3 class="invest-card-title">
+                        Épargne et transmission
+                    </h3>
                     <p class="invest-card-text">
-                        Résidence, locatif ou pierre-papier : rendement, crédit, fiscalité,
-                        frais et manque de liquidité doivent être regardés ensemble.
+                        Permet de combiner des fonds en euros
+                        et des unités de compte selon les supports
+                        proposés par le contrat.
+                        Intérêt pour l'épargne à long terme
+                        et la transmission.
                     </p>
                 </article>
 
                 <article class="invest-card">
-                    <p class="invest-card-kicker">Crypto-actifs</p>
-                    <h3 class="invest-card-title">Une poche très volatile</h3>
+                    <p class="invest-card-kicker">PER</p>
+                    <h3 class="invest-card-title">
+                        Plan d'épargne retraite
+                    </h3>
                     <p class="invest-card-text">
-                        Les variations peuvent être importantes. Elle ne remplace ni une épargne
-                        de précaution ni une diversification construite.
+                        Destiné à préparer la retraite.
+                        Les versements volontaires peuvent ouvrir
+                        droit à une déduction fiscale sous conditions.
+                        L'argent est généralement bloqué jusqu'à
+                        la retraite, sauf exceptions légales.
                     </p>
                 </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">PEE</p>
+                    <h3 class="invest-card-title">
+                        Plan d'épargne entreprise
+                    </h3>
+                    <p class="invest-card-text">
+                        Dispositif d'épargne salariale pouvant recevoir
+                        notamment la participation, l'intéressement
+                        et un éventuel abondement de l'employeur.
+                        Les sommes sont généralement bloquées cinq ans,
+                        sauf cas de déblocage anticipé.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Bon réflexe</p>
+                    <h3 class="invest-card-title">
+                        Comparer avant d'ouvrir
+                    </h3>
+                    <p class="invest-card-text">
+                        Comparer les frais, les supports disponibles,
+                        les conditions de retrait et la fiscalité.
+                        Une bonne enveloppe ne transforme pas
+                        un mauvais investissement en bon placement.
+                    </p>
+                </article>
+
             </div>
+
         </section>
 
 
+        <!-- ==========================================================
+             ASSURANCE-VIE
+             ========================================================== -->
 
         <section class="invest-section">
+
             <div class="invest-section-head">
-                <span class="invest-section-number">Avant d'aller plus loin</span>
-                <h2 class="invest-section-title">D'abord, garder une poche vraiment sûre et disponible</h2>
+
+                <span class="invest-section-number">
+                    Niveau 2 — Assurance-vie
+                </span>
+
+                <h2 class="invest-section-title">
+                    Faire fructifier son épargne et préparer sa transmission
+                </h2>
+
                 <p class="invest-section-text">
-                    Il n'est pas nécessaire de remplir tous ses livrets jusqu'au plafond avant de commencer
-                    à investir. En revanche, il est prudent de conserver une réserve suffisante pour les
-                    dépenses imprévues et les projets proches. Cet argent n'a pas vocation à chercher le
-                    rendement maximal : il doit surtout rester disponible et ne pas pouvoir perdre de valeur
-                    au mauvais moment.
+                    Malgré son nom, l'assurance-vie n'est pas seulement
+                    un produit destiné au décès. C'est une enveloppe
+                    d'épargne qui permet de choisir différents supports
+                    et de récupérer son argent de son vivant.
                 </p>
+
             </div>
 
             <div class="invest-grid">
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Livret A</p>
-                    <h3 class="invest-card-title">La réserve de base</h3>
-                    <p class="invest-card-text">
-                        Argent disponible à tout moment, capital garanti par l'État et intérêts exonérés
-                        d'impôt sur le revenu et de prélèvements sociaux. Au 1er août 2026, son taux est de
-                        1,7 %. Le taux peut évoluer.
-                    </p>
-                </article>
 
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">LDDS</p>
-                    <h3 class="invest-card-title">Un complément au Livret A</h3>
-                    <p class="invest-card-text">
-                        Il fonctionne dans le même esprit que le Livret A et affiche également 1,7 % au
-                        1er août 2026. Il peut servir à prolonger la poche de sécurité une fois le montant
-                        souhaité atteint sur le Livret A.
-                    </p>
-                </article>
-
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">LEP</p>
-                    <h3 class="invest-card-title">À regarder en priorité si vous y avez droit</h3>
-                    <p class="invest-card-text">
-                        Sous conditions de revenus, le Livret d'épargne populaire reste à 2,5 % au
-                        1er août 2026, avec les mêmes qualités de disponibilité et de sécurité.
-                    </p>
-                </article>
-            </div>
-
-            <div class="invest-alert">
-                <strong>Le bon niveau n'est pas le même pour tout le monde.</strong>
-                Une personne avec un revenu très stable, peu de charges et aucun projet proche n'a pas
-                forcément besoin de la même réserve qu'un indépendant, un propriétaire avec des travaux
-                à prévoir ou une famille avec plusieurs dépenses importantes à venir.
-            </div>
-        </section>
-
-
-        <section class="invest-section">
-            <div class="invest-section-head">
-                <span class="invest-section-number">Immobilier</span>
-                <h2 class="invest-section-title">La pierre peut construire un patrimoine, mais elle concentre aussi les risques</h2>
-                <p class="invest-section-text">
-                    L'immobilier attire parce qu'il est concret, qu'il peut produire des loyers et qu'il
-                    permet parfois d'utiliser le crédit pour acquérir un actif plus important que son apport.
-                    Mais un appartement n'est ni un livret, ni un placement garanti : il peut coûter de
-                    l'argent, perdre de la valeur et devenir difficile à revendre.
-                </p>
-            </div>
-
-            <div class="invest-grid">
-                <article class="invest-card">
-                    <p class="invest-card-kicker">Avantage</p>
-                    <h3 class="invest-card-title">L'effet du crédit</h3>
-                    <p class="invest-card-text">
-                        Un emprunt permet d'acquérir un bien sans disposer immédiatement de tout son prix.
-                        Si les loyers couvrent une partie des charges et du remboursement, le crédit peut
-                        participer à la constitution du patrimoine.
-                    </p>
-                </article>
-
-                <article class="invest-card">
-                    <p class="invest-card-kicker">Avantage</p>
-                    <h3 class="invest-card-title">Un revenu potentiel</h3>
-                    <p class="invest-card-text">
-                        Un logement loué peut produire un revenu régulier et l'immobilier peut compléter
-                        des placements financiers. Le rendement doit cependant être calculé après toutes
-                        les charges et pas seulement à partir du loyer brut.
-                    </p>
-                </article>
-
-                <article class="invest-card">
-                    <p class="invest-card-kicker">Avantage</p>
-                    <h3 class="invest-card-title">Un actif tangible</h3>
-                    <p class="invest-card-text">
-                        Le propriétaire conserve un bien réel qu'il peut louer, revendre ou parfois utiliser.
-                        Cela peut être rassurant, mais le caractère tangible ne supprime pas le risque de baisse.
-                    </p>
-                </article>
-            </div>
-
-            <div class="invest-grid">
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Risque</p>
-                    <h3 class="invest-card-title">Vacance et impayés</h3>
-                    <p class="invest-card-text">
-                        Un logement vide ne produit aucun loyer alors que le crédit, les charges et les taxes
-                        continuent. Des retards ou impayés peuvent également déséquilibrer un projet trop serré.
-                    </p>
-                </article>
-
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Risque</p>
-                    <h3 class="invest-card-title">Travaux et dépenses imprévues</h3>
-                    <p class="invest-card-text">
-                        Toiture, chaudière, copropriété, remise en état, assurance, taxe foncière ou rénovation
-                        énergétique peuvent transformer rapidement un rendement séduisant sur le papier.
-                    </p>
-                </article>
-
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Risque</p>
-                    <h3 class="invest-card-title">Manque de liquidité</h3>
-                    <p class="invest-card-text">
-                        On ne revend pas une pièce d'un appartement pour récupérer 5 000 €. Une vente peut
-                        prendre des mois et obliger à accepter un prix inférieur à celui espéré.
-                    </p>
-                </article>
-
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Risque</p>
-                    <h3 class="invest-card-title">Concentration</h3>
-                    <p class="invest-card-text">
-                        Pour beaucoup de ménages, un seul bien représente une très grande part du patrimoine.
-                        Un problème local, un mauvais emplacement ou une baisse du marché touche alors une
-                        part importante de l'épargne.
-                    </p>
-                </article>
-
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Risque</p>
-                    <h3 class="invest-card-title">Le crédit amplifie aussi les difficultés</h3>
-                    <p class="invest-card-text">
-                        L'effet de levier fonctionne dans les deux sens. Si la valeur du bien baisse ou si les
-                        revenus locatifs ne suivent pas, la dette reste à rembourser.
-                    </p>
-                </article>
-
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Alternative</p>
-                    <h3 class="invest-card-title">SCPI : plus simple, pas sans risque</h3>
-                    <p class="invest-card-text">
-                        Les SCPI permettent d'accéder à plusieurs immeubles sans gérer directement les
-                        locataires. En contrepartie, elles comportent des frais, un risque de baisse du prix
-                        des parts et des revenus, et la revente peut prendre du temps. Ni le capital ni le
-                        rendement ne sont garantis.
-                    </p>
-                </article>
-            </div>
-
-            <div class="invest-alert">
-                <strong>À calculer avant d'acheter :</strong>
-                prix d'acquisition + frais d'achat + coût du crédit + charges + travaux + fiscalité +
-                vacance probable, puis comparer le résultat au loyer réellement encaissable. Un rendement
-                brut élevé peut devenir beaucoup moins intéressant une fois toutes les dépenses intégrées.
-            </div>
-        </section>
-
-
-        <section class="invest-section">
-            <div class="invest-section-head">
-                <span class="invest-section-number">Assurance-vie</span>
-                <h2 class="invest-section-title">Après la réserve de sécurité : une enveloppe souple pour investir progressivement</h2>
-                <p class="invest-section-text">
-                    Une fois une partie de l'épargne conservée sur Livret A, LDDS ou LEP selon votre situation,
-                    l'assurance-vie peut servir à investir de l'argent dont vous n'avez pas besoin immédiatement.
-                    Malgré son nom, ce n'est pas seulement un produit destiné au décès : c'est une enveloppe
-                    d'épargne dans laquelle on choisit différents supports.
-                </p>
-            </div>
-
-            <div class="invest-grid">
                 <article class="invest-card">
                     <p class="invest-card-kicker">Support prudent</p>
-                    <h3 class="invest-card-title">Le fonds en euros</h3>
+                    <h3 class="invest-card-title">
+                        Fonds en euros
+                    </h3>
                     <p class="invest-card-text">
-                        Le capital du fonds en euros bénéficie d'une garantie de l'assureur selon les conditions
-                        du contrat. Le rendement varie d'une année à l'autre et les frais doivent être examinés.
+                        Le capital bénéficie d'une garantie de l'assureur
+                        selon les conditions du contrat.
+                        Les intérêts sont généralement acquis
+                        grâce à l'effet cliquet.
+                        Le rendement varie chaque année.
                     </p>
                 </article>
 
                 <article class="invest-card">
-                    <p class="invest-card-kicker">Supports investis</p>
-                    <h3 class="invest-card-title">Les unités de compte</h3>
+                    <p class="invest-card-kicker">Supports risqués</p>
+                    <h3 class="invest-card-title">
+                        Unités de compte
+                    </h3>
                     <p class="invest-card-text">
-                        Fonds actions, obligations, ETF, immobilier ou autres supports peuvent être proposés.
-                        Leur valeur monte et baisse : le capital placé en unités de compte n'est pas garanti.
+                        Actions, ETF, obligations, immobilier et autres
+                        fonds peuvent être proposés.
+                        La valeur des unités de compte fluctue
+                        et le capital n'est pas garanti.
                     </p>
                 </article>
 
                 <article class="invest-card">
                     <p class="invest-card-kicker">Souplesse</p>
-                    <h3 class="invest-card-title">On peut retirer avant huit ans</h3>
+                    <h3 class="invest-card-title">
+                        Retraits possibles avant huit ans
+                    </h3>
                     <p class="invest-card-text">
-                        L'argent n'est pas juridiquement bloqué pendant huit ans. Des rachats partiels ou totaux
-                        sont possibles ; huit ans correspond surtout à un cap important de la fiscalité du contrat.
+                        L'argent n'est pas bloqué pendant huit ans.
+                        Des rachats partiels ou totaux sont possibles.
+                        Huit ans correspond principalement
+                        à un seuil fiscal important.
                     </p>
                 </article>
+
             </div>
 
             <div class="invest-grid">
+
                 <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Avantages</p>
-                    <h3 class="invest-card-title">Pourquoi elle peut être intéressante</h3>
+                    <p class="invest-card-kicker">Avantage</p>
+                    <h3 class="invest-card-title">
+                        Combiner sécurité et croissance
+                    </h3>
                     <p class="invest-card-text">
-                        Grande variété de supports, possibilité de mélanger fonds en euros et placements plus
-                        dynamiques, versements libres ou programmés, retraits partiels, possibilité de modifier
-                        la répartition et intérêt patrimonial de la clause bénéficiaire en cas de décès.
+                        Possibilité de répartir son épargne entre
+                        fonds en euros et unités de compte,
+                        selon son horizon et sa capacité
+                        à accepter les pertes.
                     </p>
                 </article>
 
                 <article class="invest-card invest-card--soft">
                     <p class="invest-card-kicker">Fiscalité</p>
-                    <h3 class="invest-card-title">L'ancienneté du contrat compte</h3>
+                    <h3 class="invest-card-title">
+                        L'intérêt des huit ans
+                    </h3>
                     <p class="invest-card-text">
-                        Lors d'un retrait, seule la part correspondant aux gains est imposable. Après huit ans,
-                        un abattement annuel sur les gains retirés est prévu : 4 600 € pour une personne seule
-                        et 9 200 € pour un couple marié ou pacsé soumis à imposition commune. Les règles exactes
-                        dépendent notamment de la date et du montant des versements.
+                        Après huit ans, un abattement annuel
+                        sur les gains retirés est prévu pour
+                        l'impôt sur le revenu : 4 600 € pour une
+                        personne seule et 9 200 € pour un couple
+                        soumis à imposition commune.
+                        Les prélèvements sociaux restent applicables.
                     </p>
                 </article>
 
                 <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Inconvénients</p>
-                    <h3 class="invest-card-title">Les frais peuvent manger une partie du rendement</h3>
+                    <p class="invest-card-kicker">Transmission</p>
+                    <h3 class="invest-card-title">
+                        La clause bénéficiaire
+                    </h3>
                     <p class="invest-card-text">
-                        Frais sur versement, frais annuels de gestion, frais des fonds et parfois frais
-                        d'arbitrage : deux assurances-vie portant le même nom peuvent avoir des coûts et une
-                        qualité très différents. Comparer les frais est indispensable.
+                        Permet de désigner les personnes qui recevront
+                        le capital en cas de décès, selon les conditions
+                        du contrat et les règles civiles et fiscales
+                        applicables.
                     </p>
                 </article>
 
                 <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Inconvénients</p>
-                    <h3 class="invest-card-title">La sécurité dépend de ce qu'il y a dedans</h3>
+                    <p class="invest-card-kicker">Inconvénient</p>
+                    <h3 class="invest-card-title">
+                        Attention aux frais
+                    </h3>
                     <p class="invest-card-text">
-                        « Assurance-vie » ne veut pas dire « sans risque ». Une allocation fortement investie
-                        en unités de compte peut subir une baisse importante, exactement comme les marchés
-                        auxquels ces supports sont exposés.
+                        Frais de versement, frais de gestion,
+                        frais des supports et éventuels frais
+                        d'arbitrage peuvent réduire la performance.
                     </p>
                 </article>
 
                 <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Inconvénients</p>
-                    <h3 class="invest-card-title">Tous les contrats ne se valent pas</h3>
+                    <p class="invest-card-kicker">Inconvénient</p>
+                    <h3 class="invest-card-title">
+                        Tous les contrats ne se valent pas
+                    </h3>
                     <p class="invest-card-text">
-                        Choix des supports, qualité du fonds en euros, frais, options de gestion et rapidité
-                        des opérations varient selon l'assureur et le distributeur. Il est possible de détenir
-                        plusieurs contrats : inutile de choisir uniquement parce que sa banque le propose.
+                        La qualité du fonds en euros, les supports
+                        disponibles, les frais et les conditions
+                        de retrait varient selon les contrats.
                     </p>
                 </article>
 
                 <article class="invest-card invest-card--soft">
                     <p class="invest-card-kicker">Bon réflexe</p>
-                    <h3 class="invest-card-title">Ouvrir tôt peut avoir un intérêt</h3>
+                    <h3 class="invest-card-title">
+                        Prendre date
+                    </h3>
                     <p class="invest-card-text">
-                        L'ancienneté fiscale commence à la date d'ouverture du contrat. Cela ne signifie pas
-                        qu'il faut y verser beaucoup immédiatement : comprendre le contrat et ses frais reste
-                        plus important que de se précipiter.
+                        Ouvrir un contrat avec un premier versement
+                        permet de commencer à acquérir son ancienneté
+                        fiscale. Il n'est pas nécessaire d'y placer
+                        immédiatement une somme importante.
                     </p>
                 </article>
+
             </div>
+
         </section>
 
 
+        <!-- ==========================================================
+             REVENUS PASSIFS
+             ========================================================== -->
+
         <section class="invest-section">
+
             <div class="invest-section-head">
-                <span class="invest-section-number">Bourse</span>
-                <h2 class="invest-section-title">Pour le long terme : accepter les baisses pour chercher davantage de croissance</h2>
+
+                <span class="invest-section-number">
+                    Objectif — Revenus passifs
+                </span>
+
+                <h2 class="invest-section-title">
+                    Percevoir des revenus sans y consacrer sa vie
+                </h2>
+
                 <p class="invest-section-text">
-                    Investir en bourse revient à devenir propriétaire d'une petite partie d'entreprises,
-                    directement avec des actions ou indirectement avec des fonds. Sur une longue durée,
-                    cela peut participer à la croissance du patrimoine, mais aucune progression n'est
-                    garantie et des baisses importantes peuvent survenir.
+                    L'objectif est de disposer d'un patrimoine capable
+                    de produire des revenus complémentaires,
+                    avec le moins de contraintes de gestion possible,
+                    tout en conservant la possibilité de le transmettre.
                 </p>
+
             </div>
 
-            <div class="invest-grid">
-                <article class="invest-card">
-                    <p class="invest-card-kicker">Actions individuelles</p>
-                    <h3 class="invest-card-title">Choisir ses entreprises</h3>
-                    <p class="invest-card-text">
-                        Acheter quelques sociétés peut sembler simple, mais cela demande de comprendre leur
-                        activité, leurs comptes, leur valorisation et leurs risques. Quelques titres seulement
-                        peuvent créer une forte concentration.
-                    </p>
-                </article>
+            <div class="invest-table-wrap">
 
-                <article class="invest-card">
-                    <p class="invest-card-kicker">ETF</p>
-                    <h3 class="invest-card-title">Diversifier avec un seul fonds</h3>
-                    <p class="invest-card-text">
-                        Un ETF cherche à reproduire un indice composé de nombreuses valeurs. Il peut simplifier
-                        la diversification, mais il baisse lorsque l'indice suivi baisse et le capital n'est
-                        pas garanti.
-                    </p>
-                </article>
+                <table class="invest-table">
 
-                <article class="invest-card">
-                    <p class="invest-card-kicker">PEA</p>
-                    <h3 class="invest-card-title">Une enveloppe adaptée au long terme</h3>
-                    <p class="invest-card-text">
-                        Le PEA permet de détenir des actions et certains fonds ou ETF éligibles. Après cinq ans,
-                        ses gains bénéficient d'une exonération d'impôt sur le revenu lors des retraits, tout en
-                        restant soumis aux prélèvements sociaux.
-                    </p>
-                </article>
-            </div>
+                    <thead>
+                        <tr>
+                            <th>Placement</th>
+                            <th>Origine des revenus</th>
+                            <th>Gestion personnelle</th>
+                            <th>Liquidité</th>
+                            <th>Capital garanti</th>
+                        </tr>
+                    </thead>
 
-            <div class="invest-grid">
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Risque</p>
-                    <h3 class="invest-card-title">Une forte baisse reste possible</h3>
-                    <p class="invest-card-text">
-                        Les marchés ne montent pas en ligne droite. Une somme destinée à un achat proche ne
-                        devrait pas dépendre de la valeur de la bourse le jour où vous en aurez besoin.
-                    </p>
-                </article>
+                    <tbody>
 
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Risque</p>
-                    <h3 class="invest-card-title">La psychologie de l'investisseur</h3>
-                    <p class="invest-card-text">
-                        Acheter après une forte hausse et vendre dans la panique après une chute peut dégrader
-                        fortement le résultat. Une stratégie simple et comprise à l'avance est souvent plus
-                        facile à tenir qu'une succession de paris.
-                    </p>
-                </article>
+                        <tr>
+                            <td>Immobilier locatif</td>
+                            <td>Loyers</td>
+                            <td>Importante en gestion directe</td>
+                            <td>Faible</td>
+                            <td>Non</td>
+                        </tr>
 
-                <article class="invest-card invest-card--soft">
-                    <p class="invest-card-kicker">Risque</p>
-                    <h3 class="invest-card-title">Les frais et produits complexes</h3>
-                    <p class="invest-card-text">
-                        Courtage, frais de fonds, change et produits à effet de levier peuvent réduire le
-                        rendement ou amplifier les pertes. Un produit difficile à expliquer n'est pas rendu
-                        meilleur parce qu'il est coté en bourse.
-                    </p>
-                </article>
+                        <tr>
+                            <td>SCPI de rendement</td>
+                            <td>Revenus distribués</td>
+                            <td>Faible</td>
+                            <td>Faible et variable</td>
+                            <td>Non</td>
+                        </tr>
+
+                        <tr>
+                            <td>Actions à dividendes</td>
+                            <td>Dividendes</td>
+                            <td>Suivi des entreprises</td>
+                            <td>Variable selon les titres</td>
+                            <td>Non</td>
+                        </tr>
+
+                        <tr>
+                            <td>ETF distribuants</td>
+                            <td>Distributions du fonds</td>
+                            <td>Faible</td>
+                            <td>Généralement bonne</td>
+                            <td>Non</td>
+                        </tr>
+
+                        <tr>
+                            <td>Fonds en euros</td>
+                            <td>Intérêts et rachats éventuels</td>
+                            <td>Faible</td>
+                            <td>Selon les conditions de rachat</td>
+                            <td>Selon le contrat</td>
+                        </tr>
+
+                        <tr>
+                            <td>Livrets réglementés</td>
+                            <td>Intérêts</td>
+                            <td>Très faible</td>
+                            <td>Élevée</td>
+                            <td>Oui</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
             </div>
 
             <div class="invest-alert">
-                <strong>Une approche possible à étudier :</strong>
-                investir sur un horizon long, diversifier largement, limiter les frais et verser
-                progressivement plutôt que chercher à deviner chaque sommet et chaque creux du marché.
-                Ce n'est toutefois pas une garantie de gain : même un portefeuille diversifié peut perdre
-                de la valeur.
+
+                <strong>
+                    Quel capital faut-il pour générer des revenus ?
+                </strong>
+
+                <p>
+                    Exemple purement mathématique avec un capital
+                    de 100 000 €, avant fiscalité :
+                </p>
+
+                <ul>
+                    <li>À 3 % : 3 000 €/an, soit 250 €/mois.</li>
+                    <li>À 4 % : 4 000 €/an, soit environ 333 €/mois.</li>
+                    <li>À 5 % : 5 000 €/an, soit environ 417 €/mois.</li>
+                    <li>À 6 % : 6 000 €/an, soit 500 €/mois.</li>
+                </ul>
+
+                Ces chiffres supposent que le taux indiqué correspond
+                effectivement aux revenus distribués après les frais
+                du placement et avant fiscalité personnelle.
+                Ils ne constituent pas une prévision de rendement.
+
             </div>
+
+
         </section>
 
 
+        <!-- ==========================================================
+             NIVEAU 3 — CRYPTO-ACTIFS
+             ========================================================== -->
+
         <section class="invest-section">
+
             <div class="invest-section-head">
-                <span class="invest-section-number">Étape 5</span>
-                <h2 class="invest-section-title">Ce qu'il faut surveiller dans le temps</h2>
+
+                <span class="invest-section-number">
+                    Niveau 3 — Crypto-actifs
+                </span>
+
+                <h2 class="invest-section-title">
+                    Une poche facultative et très risquée
+                </h2>
+
                 <p class="invest-section-text">
-                    La gestion du patrimoine ne s'arrête pas au moment de l'achat.
-                    Un bon tableau de bord doit permettre de savoir où vous en êtes sans
-                    passer son temps à regarder les marchés.
+                    Les crypto-actifs peuvent constituer une petite
+                    partie d'un patrimoine déjà diversifié.
+                    Ils ne remplacent ni l'épargne de précaution,
+                    ni les investissements traditionnels.
                 </p>
+
+            </div>
+
+            <div class="invest-grid">
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">BTC</p>
+                    <h3 class="invest-card-title">
+                        Bitcoin
+                    </h3>
+                    <p class="invest-card-text">
+                        Crypto-actif fonctionnant sur un réseau
+                        décentralisé. Sa valeur dépend notamment
+                        de l'offre et de la demande.
+                        Il ne produit pas intrinsèquement de revenu.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">ETH</p>
+                    <h3 class="invest-card-title">
+                        Ether
+                    </h3>
+                    <p class="invest-card-text">
+                        Crypto-actif utilisé sur le réseau Ethereum,
+                        qui permet notamment l'exécution de contrats
+                        intelligents et d'applications décentralisées.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Risque élevé</p>
+                    <h3 class="invest-card-title">
+                        Volatilité et conservation
+                    </h3>
+                    <p class="invest-card-text">
+                        Fortes variations de prix, risques techniques,
+                        perte des moyens d'accès, défaillance
+                        d'intermédiaires et possibilité de perdre
+                        la totalité de son investissement.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="invest-alert">
+                <strong>Déjà avoir le reste... 😂</strong>
+                Il n'est absolument pas nécessaire de posséder
+                des crypto-actifs pour construire un patrimoine.
+                Cette poche peut parfaitement rester à 0 %.
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================================
+             NIVEAU 4 — ACTIFS ALTERNATIFS
+             ========================================================== -->
+
+        <section class="invest-section">
+
+            <div class="invest-section-head">
+
+                <span class="invest-section-number">
+                    Niveau 4 — Actifs alternatifs
+                </span>
+
+                <h2 class="invest-section-title">
+                    Diversifier au-delà des placements traditionnels
+                </h2>
+
+                <p class="invest-section-text">
+                    Les actifs alternatifs peuvent compléter
+                    un patrimoine déjà constitué.
+                    Ils présentent cependant des caractéristiques
+                    très différentes et ne répondent pas tous
+                    aux mêmes objectifs.
+                </p>
+
+            </div>
+
+            <div class="invest-grid">
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Métaux précieux</p>
+                    <h3 class="invest-card-title">
+                        Or et argent physiques
+                    </h3>
+                    <p class="invest-card-text">
+                        Pièces ou lingots détenus physiquement.
+                        Ils ne génèrent ni loyers, ni intérêts,
+                        ni dividendes. Leur valeur fluctue
+                        selon le marché.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Private equity</p>
+                    <h3 class="invest-card-title">
+                        Entreprises non cotées
+                    </h3>
+                    <p class="invest-card-text">
+                        Investir dans des entreprises qui ne sont
+                        pas cotées en bourse. Le potentiel de gain
+                        s'accompagne d'un risque important de perte
+                        en capital et d'une faible liquidité.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Collection</p>
+                    <h3 class="invest-card-title">
+                        Objets de collection
+                    </h3>
+                    <p class="invest-card-text">
+                        Montres, œuvres d'art, véhicules de collection
+                        ou autres objets rares.
+                        Leur valeur dépend notamment de leur état,
+                        de leur authenticité et de la demande.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================================
+             OR PHYSIQUE — PROTECTION CONTRE LES CRISES
+             ========================================================== -->
+
+        <section class="invest-section">
+
+            <div class="invest-section-head">
+
+                <span class="invest-section-number">
+                    Protection patrimoniale
+                </span>
+
+                <h2 class="invest-section-title">
+                    L'or physique comme protection complémentaire
+                </h2>
+
+                <p class="invest-section-text">
+                    L'or physique peut être envisagé comme une réserve
+                    de valeur complémentaire face à certaines crises
+                    économiques, monétaires ou géopolitiques.
+                    Il ne constitue cependant pas une protection
+                    garantie contre toutes les crises.
+                </p>
+
+            </div>
+
+            <div class="invest-grid">
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Or physique</p>
+                    <h3 class="invest-card-title">
+                        Détenir un actif tangible
+                    </h3>
+                    <p class="invest-card-text">
+                        Posséder directement des pièces ou des lingots
+                        permet de détenir un actif qui ne dépend pas
+                        de la promesse de remboursement d'un émetteur.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Conservation</p>
+                    <h3 class="invest-card-title">
+                        Coffre bancaire
+                    </h3>
+                    <p class="invest-card-text">
+                        Un coffre bancaire peut réduire certains
+                        risques de vol au domicile.
+                        Il faut cependant tenir compte du coût,
+                        des conditions d'assurance et des éventuelles
+                        difficultés d'accès en situation de crise.
+                    </p>
+                </article>
+
+                <article class="invest-card invest-card--soft">
+                    <p class="invest-card-kicker">Limites</p>
+                    <h3 class="invest-card-title">
+                        Aucun revenu régulier
+                    </h3>
+                    <p class="invest-card-text">
+                        L'or ne verse aucun revenu.
+                        Son prix peut baisser et sa revente
+                        peut entraîner des frais et une fiscalité.
+                        Il ne remplace pas l'épargne disponible.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="invest-alert">
+                <strong>Ma vision personnelle :</strong>
+                Ce sommet de pyramide est "au cas-où" et non dans une
+                logique de recherche de revenus passifs. Pas primordiale.
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================================
+             TRANSMISSION
+             ========================================================== -->
+
+        <section class="invest-section">
+
+            <div class="invest-section-head">
+
+                <span class="invest-section-number">
+                    Préparer l'avenir
+                </span>
+
+                <h2 class="invest-section-title">
+                    Construire un patrimoine transmissible
+                </h2>
+
+                <p class="invest-section-text">
+                    L'objectif peut être de profiter des revenus
+                    de son patrimoine pendant sa vie, tout en
+                    conservant un capital susceptible d'être
+                    transmis à ses proches.
+                </p>
+
+            </div>
+
+            <div class="invest-grid">
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Immobilier</p>
+                    <h3 class="invest-card-title">
+                        Biens et parts de SCPI
+                    </h3>
+                    <p class="invest-card-text">
+                        Les biens immobiliers et les parts de SCPI
+                        peuvent être transmis dans le cadre
+                        d'une donation ou d'une succession.
+                        Le démembrement de propriété peut également
+                        être étudié avec un notaire.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Placements financiers</p>
+                    <h3 class="invest-card-title">
+                        Actions, ETF et comptes-titres
+                    </h3>
+                    <p class="invest-card-text">
+                        Les titres financiers peuvent intégrer
+                        la succession. Le PEA est clôturé au décès
+                        de son titulaire, mais les titres et les
+                        liquidités correspondants restent des
+                        éléments du patrimoine successoral.
+                    </p>
+                </article>
+
+                <article class="invest-card">
+                    <p class="invest-card-kicker">Assurance-vie</p>
+                    <h3 class="invest-card-title">
+                        Désigner ses bénéficiaires
+                    </h3>
+                    <p class="invest-card-text">
+                        L'assurance-vie bénéficie de règles
+                        spécifiques de transmission.
+                        La clause bénéficiaire, l'âge lors
+                        des versements et les montants investis
+                        doivent être pris en compte.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="invest-alert">
+                <strong>Anticiper plutôt que subir :</strong>
+                préparer la transmission, identifier les bénéficiaires,
+                conserver les documents importants et organiser
+                les informations nécessaires à ses proches.
+                Un notaire peut accompagner les décisions
+                relatives aux donations et à la succession.
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================================
+             SUIVI MENSUEL
+             ========================================================== -->
+
+        <section class="invest-section">
+
+            <div class="invest-section-head">
+
+                <span class="invest-section-number">
+                    Gestion du patrimoine
+                </span>
+
+                <h2 class="invest-section-title">
+                    Moins d'une heure de suivi chaque mois
+                </h2>
+
+                <p class="invest-section-text">
+                    L'objectif est de construire une organisation
+                    suffisamment simple pour ne pas avoir besoin
+                    de surveiller ses investissements quotidiennement.
+                </p>
+
             </div>
 
             <ul class="invest-checklist">
-                <li><strong>Patrimoine net :</strong> est-il réellement en progression ?</li>
-                <li><strong>Budget :</strong> vos dépenses laissent-elles une capacité d'épargne durable ?</li>
-                <li><strong>Objectifs :</strong> votre trajectoire reste-t-elle compatible avec vos projets ?</li>
-                <li><strong>Diversification :</strong> êtes-vous trop dépendant d'un actif, d'un secteur ou d'une zone ?</li>
-                <li><strong>Frais :</strong> combien coûtent réellement vos contrats, fonds, transactions et intermédiaires ?</li>
-                <li><strong>Risque :</strong> pourriez-vous supporter une forte baisse sans vendre dans la panique ?</li>
+
+                <li>
+                    <strong>Patrimoine net :</strong>
+                    actualiser la valeur globale des actifs et des dettes.
+                </li>
+
+                <li>
+                    <strong>Matelas de sécurité :</strong>
+                    vérifier que la réserve reste suffisante.
+                </li>
+
+                <li>
+                    <strong>Budget :</strong>
+                    suivre les revenus, les dépenses
+                    et la capacité d'épargne.
+                </li>
+
+                <li>
+                    <strong>Revenus passifs :</strong>
+                    suivre les loyers, intérêts et distributions
+                    réellement encaissés.
+                </li>
+
+                <li>
+                    <strong>Diversification :</strong>
+                    vérifier la répartition du patrimoine
+                    entre les différentes catégories d'actifs.
+                </li>
+
+                <li>
+                    <strong>Frais :</strong>
+                    surveiller le coût réel des placements.
+                </li>
+
+                <li>
+                    <strong>Fiscalité :</strong>
+                    conserver les documents nécessaires
+                    aux déclarations.
+                </li>
+
+                <li>
+                    <strong>Objectifs :</strong>
+                    vérifier que la stratégie reste compatible
+                    avec les projets personnels.
+                </li>
+
             </ul>
 
             <div class="invest-alert">
-                <strong>À retenir :</strong>
-                chercher uniquement le placement qui a le mieux performé récemment est rarement
-                une méthode de gestion patrimoniale. L'objectif est plutôt de construire une
-                répartition cohérente avec vos besoins, votre horizon et votre capacité à accepter
-                une perte éventuelle.
+                <strong>Une fois par an :</strong>
+                faire un bilan plus complet du patrimoine,
+                vérifier les contrats, les bénéficiaires,
+                les frais et les objectifs.
+                Rééquilibrer si nécessaire, en tenant compte
+                des coûts et de la fiscalité.
             </div>
+
         </section>
 
 
+        <!-- ==========================================================
+             CONCLUSION
+             ========================================================== -->
+
         <section class="invest-section">
+
             <div class="invest-section-head">
-                <span class="invest-section-number">Une règle simple</span>
-                <h2 class="invest-section-title">Comprendre avant d'acheter</h2>
+
+                <span class="invest-section-number">
+                    Une règle simple
+                </span>
+
+                <h2 class="invest-section-title">
+                    Comprendre avant d'acheter
+                </h2>
+
                 <p class="invest-section-text">
-                    Si vous ne savez pas expliquer simplement comment un placement fonctionne,
-                    ce qu'il coûte, quand vous pouvez récupérer votre argent et dans quelles
-                    conditions vous pouvez perdre, il reste probablement du travail avant d'investir.
+                    Si l'on ne sait pas expliquer simplement
+                    comment un placement fonctionne, comment il
+                    génère des revenus, ce qu'il coûte, quand
+                    on peut récupérer son argent et dans quelles
+                    conditions on peut perdre, il vaut mieux
+                    continuer à se renseigner avant d'investir.
                 </p>
+
+            </div>
+
+            <div class="invest-principe">
+
+                <strong>Mon objectif final :</strong>
+
+                disposer d'un patrimoine sécurisé pour les besoins
+                immédiats, diversifié pour le long terme,
+                capable de générer des revenus complémentaires,
+                nécessitant le moins de gestion possible
+                et pouvant être transmis.
+
+                <br><br>
+
+                L'argent doit rester un outil au service de la vie,
+                et non devenir une occupation permanente.
+
             </div>
 
             <div class="invest-action">
-                <a href="{% url 'argent' %}">← Retour à Gagner de l'argent</a>
+                <a href="{% url 'argent' %}">
+                    ← Retour à Gagner de l'argent
+                </a>
             </div>
+
         </section>
 
 
+        <!-- ==========================================================
+             SOURCES ET PRÉCAUTIONS
+             ========================================================== -->
+
         <div class="invest-sources">
+
             <strong>Information générale :</strong>
-            cette page a une vocation pédagogique et ne constitue pas un conseil en investissement
-            personnalisé. Les choix doivent tenir compte de votre situation, de votre horizon et de
-            votre tolérance au risque. Pour approfondir :
-            <a href="https://www.amf-france.org/fr/espace-epargnants" target="_blank" rel="noopener noreferrer">Espace épargnants de l'AMF</a>.
-            Ressources complémentaires :
-            <a href="https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/livret-comment-ca-marche" target="_blank" rel="noopener noreferrer">Livret A</a>,
-            <a href="https://www.amf-france.org/fr/espace-epargnants/comprendre-les-produits-financiers/supports-dinvestissement/assurance-vie" target="_blank" rel="noopener noreferrer">assurance-vie</a>,
-            <a href="https://www.amf-france.org/fr/espace-epargnants/comprendre-les-produits-financiers/placements-collectifs/scpi-un-autre-moyen-dinvestir-dans-limmobilier" target="_blank" rel="noopener noreferrer">SCPI</a>
-            et
-            <a href="https://www.amf-france.org/fr/espace-epargnants/comprendre-les-produits-financiers/placements-collectifs/trackers-etf" target="_blank" rel="noopener noreferrer">ETF</a>.
+
+            cette page a une vocation pédagogique et présente
+            également une réflexion patrimoniale personnelle.
+            Elle ne constitue pas un conseil en investissement
+            personnalisé.
+
+            Les choix doivent tenir compte de la situation
+            personnelle, de l'horizon d'investissement,
+            de la fiscalité et de la capacité à supporter
+            une perte en capital.
+
+            Les taux, plafonds et règles fiscales peuvent évoluer.
+
+            <br><br>
+
+            <strong>Sources et ressources complémentaires :</strong>
+
+            <br>
+
+            <a href="https://www.amf-france.org/fr/espace-epargnants"
+               target="_blank"
+               rel="noopener noreferrer">
+                Autorité des marchés financiers — Espace épargnants
+            </a>
+
+            <br>
+
+            <a href="https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/livret-comment-ca-marche"
+               target="_blank"
+               rel="noopener noreferrer">
+                Ministère de l'Économie — Livret A
+            </a>
+
+            <br>
+
+            <a href="https://www.amf-france.org/fr/espace-epargnants/comprendre-les-produits-financiers/supports-dinvestissement/assurance-vie"
+               target="_blank"
+               rel="noopener noreferrer">
+                AMF — Assurance-vie
+            </a>
+
+            <br>
+
+            <a href="https://www.amf-france.org/fr/espace-epargnants/comprendre-les-produits-financiers/placements-collectifs/scpi-un-autre-moyen-dinvestir-dans-limmobilier"
+               target="_blank"
+               rel="noopener noreferrer">
+                AMF — SCPI
+            </a>
+
+            <br>
+
+            <a href="https://www.amf-france.org/fr/espace-epargnants/comprendre-les-produits-financiers/placements-collectifs/trackers-etf"
+               target="_blank"
+               rel="noopener noreferrer">
+                AMF — ETF et trackers
+            </a>
+
+            <br>
+
+            <a href="https://www.service-public.fr/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Service public — Droits et démarches
+            </a>
+
+            <br>
+
+            <a href="https://www.impots.gouv.fr/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Direction générale des finances publiques
+            </a>
+
         </div>
 
     </div>
+
 </main>
+
 {% endblock %}
