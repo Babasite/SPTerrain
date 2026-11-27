@@ -1,0 +1,37 @@
+/* V27 — adaptation tablette et téléphone uniquement. */
+.mobile-menu{display:none}
+@media screen and (max-width:1050px){
+ body{display:block;height:auto;min-height:100dvh;overflow:visible;width:100%}
+ body>aside{position:sticky;top:0;z-index:20;width:100%;min-width:0;height:auto;max-height:85dvh;padding:10px 14px;overflow:auto;border-bottom:1px solid var(--border)}
+ body>aside h2{margin:0;display:flex;align-items:center;gap:8px;padding-right:100px;min-height:44px}
+ .mobile-menu{display:block;position:absolute;right:12px;top:10px;min-height:44px}
+ body>aside:not(.mobile-open)>nav,body>aside:not(.mobile-open)>.settings{display:none}
+ body>aside nav{display:grid;overflow:visible;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:10px}
+ body>aside nav a{white-space:normal;min-height:44px;padding:12px;overflow-wrap:anywhere}
+ body>aside .settings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:8px}
+ body>main{width:100%;height:auto;max-width:none;overflow:visible;padding:12px;display:block}
+ main header{height:auto;min-height:150px;margin:-12px -12px 12px;padding:18px 14px;flex-wrap:wrap}
+ main .kpis{height:auto;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ main .kpi{height:auto;min-height:90px;padding:12px;overflow-wrap:anywhere}
+ main .dashboard{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:auto;gap:12px;height:auto}
+ main .dashboard>.panel{grid-column:auto;grid-row:auto;height:auto;min-height:0;max-height:none;overflow:auto;padding:14px}
+ main #rent,main #history{grid-column:1/-1}
+ #rentCards{grid-template-columns:repeat(2,minmax(0,1fr));height:auto}
+ #history #chart{min-height:170px}#history #chart svg{height:auto;max-height:none}
+ .history-heading h2,.history-heading .chart-key{white-space:normal;flex-wrap:wrap}
+ main #allocation{grid-template-columns:minmax(0,1fr);gap:10px}#allocation .ring{max-width:140px}
+ #legend .legend-row{font-size:12px}
+ dialog[id]{width:calc(100% - 20px);max-width:calc(100% - 20px);max-height:88dvh;padding:14px;overflow:auto;overflow-wrap:anywhere}
+ dialog .v14head,dialog .actions{flex-wrap:wrap}dialog .v14grid,#workspace22 .v22charts{grid-template-columns:minmax(0,1fr)}
+ dialog input:not([type=checkbox]),dialog select,dialog textarea{max-width:100%;font-size:16px;min-height:44px}
+ dialog button,.settings button{min-height:44px}dialog table{min-width:0}dialog td,dialog th{white-space:normal}
+ dialog .mobile-table-scroll{max-width:100%;overflow-x:auto}dialog .mobile-table-scroll table{min-width:560px}
+ .editrow{grid-template-columns:repeat(2,minmax(0,1fr))} .strategy-pyramid{max-width:100%;height:auto}
+}
+@media screen and (max-width:600px){
+ main .dashboard{grid-template-columns:minmax(0,1fr)}
+ main .dashboard>.panel{grid-column:1/-1}
+ main .kpi{gap:7px}.kpi strong{font-size:20px}.kpi-icon{width:30px;height:30px}
+ main .kpis>.kpi:last-child:nth-child(odd){grid-column:1/-1}
+ .rentCard strong{font-size:24px}.panel h2{font-size:16px}nav a{font-size:14px}
+}
