@@ -1,1 +1,173 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mon Patrimoine</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="responsive.css"></head><body><aside><h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="14" width="5" height="8" rx="1" fill="#3985ef"/><rect x="9" y="8" width="5" height="14" rx="1" fill="#70b7ff"/><rect x="16" y="2" width="5" height="20" rx="1" fill="#3985ef"/></svg> Mon Patrimoine</h2><nav><a href="#top"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11 12 2l10 9M5 9v12h5v-7h4v7h5V9"/></svg> Vue d’ensemble</a><a href="#etf"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" stroke-dasharray="9 3"/><path d="m6 15 5-5 3 3 4-5"/></svg> ETF</a><a href="#assets"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 18 7-7 4 3 8-9m-6 0h6v6"/></svg> Actions</a><a href="#assets"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v20M12 2v4m0 12v4M5 6h9a3 3 0 010 6H8m0 0h7a3 3 0 010 6H5"/></svg> Cryptomonnaies</a><a href="#assets"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11 12 2l10 9M5 9v12h5v-7h4v7h5V9"/></svg> Immobilier / SCPI</a><a href="#assets"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 4 18 4 18 0V5M3 10c0 4 18 4 18 0M3 15c0 4 18 4 18 0"/></svg> Épargne & Liquidités</a><a href="#rent">Ma rente patrimoniale</a><a href="#simulation">Simulateur de rente</a><a href="#goals"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="13" r="9"/><circle cx="11" cy="13" r="5"/><path d="m11 13 10-10m-5 0h5v5"/></svg> Bilan & Objectifs</a><a href="#history"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V13h4v8zm7 0V8h4v13zm7 0V3h4v18z" fill="currentColor" stroke="none"/></svg> Suivi & Rapports</a></nav><div class="settings"><button id="details">Détail des actifs</button><button id="edit"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 2 4 0 1 3 3 1 3 3-2 3 1 3-3 3-3-1-2 4-4-1-1-3-3-1-2-4 2-2V6l4-1z"/><circle cx="12" cy="12" r="3"/></svg> Paramètres</button><button id="export">Exporter</button><small>Données locales · À renseigner</small></div></aside><main id="top"><header><div><h1>Bonjour ! 👋</h1><p>Voici la synthèse de ton patrimoine et de ta rente.</p></div><div id="date" class="date"></div></header><section class="kpis" id="kpis"></section><div class="dashboard"><section class="panel" id="rent"><h2>Ma rente patrimoniale (salaire)</h2><div id="rentCards"></div></section><section class="panel" id="preserve"><h2>Préservation du capital</h2><div id="preserveRows"></div></section><section class="panel" id="simulation"><h2>Simulation de rente durable</h2><div id="simRows"></div></section><section class="panel" id="etf"><h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 10-5 10 5-10 5z" fill="currentColor" stroke="none"/><path d="m2 12 10 5 10-5M2 17l10 5 10-5"/></svg> Mes ETF <span id="etfTotal"></span></h2><div id="etfTable"></div></section><section class="panel" id="allocation"><h2>Ma répartition vs objectif</h2><div id="donut"></div><div id="legend"></div></section><section class="panel" id="history"><div class="history-heading"><h2>Évolution du patrimoine</h2><div class="chart-key"><span>━ Patrimoine réel</span><span>┄ Capital à préserver</span></div></div><div id="chart"></div><small>Historique saisi manuellement</small></section><section class="panel" id="assets"><h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 11 12 2l10 9M5 9v12h5v-7h4v7h5V9"/></svg> Autres classes d’actifs</h2><div id="assetTable"></div></section><section class="panel" id="goals"><h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="13" r="9"/><circle cx="11" cy="13" r="5"/><path d="m11 13 10-10m-5 0h5v5"/></svg> Objectifs</h2><div id="goalList"></div></section><section class="panel" id="income"><h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 4 18 4 18 0V5M3 10c0 4 18 4 18 0M3 15c0 4 18 4 18 0"/></svg> Revenus par placement <small>(mois)</small></h2><div id="incomeList"></div></section><section class="panel" id="tasks"><h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 10h18m-14 4h3m4 0h3m-10 3h3"/></svg> Prochaines actions</h2><div id="taskList"></div></section></div><footer>Valeurs déclaratives, hors actualisation automatique des marchés.</footer></main><dialog id="detailDialog"><h2>Détail des actifs</h2><div id="detailBody"></div><button onclick="this.closest('dialog').close()">Fermer</button></dialog><dialog id="editor"><form id="editForm"><h2>Modifier mon patrimoine</h2><p>Montants en euros. Tu peux modifier les lignes et ajouter des actifs.</p><div id="fields"></div><div class="actions"><button type="button" id="cancel">Annuler</button><button type="submit">Enregistrer</button></div></form></dialog><script src="script.js"></script><script src="finance15.js"></script><script src="v14.js"></script><script src="v16.js"></script><script src="v17.js"></script><script src="v18.js"></script><script src="finance28.js"></script><script src="v22.js"></script><script src="responsive.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mon Patrimoine V25</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <aside>
+        <h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="14" width="5" height="8" rx="1" fill="#3985ef" />
+                <rect x="9" y="8" width="5" height="14" rx="1" fill="#70b7ff" />
+                <rect x="16" y="2" width="5" height="20" rx="1" fill="#3985ef" />
+            </svg> Mon Patrimoine</h2>
+        <nav><a href="#top"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M2 11 12 2l10 9M5 9v12h5v-7h4v7h5V9" />
+                </svg> Vue d’ensemble</a><a href="#etf"><svg class="ui-icon" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="4" stroke-dasharray="9 3" />
+                    <path d="m6 15 5-5 3 3 4-5" />
+                </svg> ETF</a><a href="#assets"><svg class="ui-icon" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="m2 18 7-7 4 3 8-9m-6 0h6v6" />
+                </svg> Actions</a><a href="#assets"><svg class="ui-icon" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M8 2v20M12 2v4m0 12v4M5 6h9a3 3 0 010 6H8m0 0h7a3 3 0 010 6H5" />
+                </svg> Cryptomonnaies</a><a href="#assets"><svg class="ui-icon" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M2 11 12 2l10 9M5 9v12h5v-7h4v7h5V9" />
+                </svg> Immobilier / SCPI</a><a href="#assets"><svg class="ui-icon" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <ellipse cx="12" cy="5" rx="9" ry="3" />
+                    <path d="M3 5v14c0 4 18 4 18 0V5M3 10c0 4 18 4 18 0M3 15c0 4 18 4 18 0" />
+                </svg> Épargne & Liquidités</a><a href="#rent">Ma rente patrimoniale</a><a href="#simulation">Simulateur
+                de rente</a><a href="#goals"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="13" r="9" />
+                    <circle cx="11" cy="13" r="5" />
+                    <path d="m11 13 10-10m-5 0h5v5" />
+                </svg> Bilan & Objectifs</a><a href="#history"><svg class="ui-icon" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M3 21V13h4v8zm7 0V8h4v13zm7 0V3h4v18z" fill="currentColor" stroke="none" />
+                </svg> Suivi & Rapports</a></nav>
+        <div class="settings"><button id="details">Inventaire du patrimoine</button><button id="edit" hidden
+                style="display:none"><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m10 2 4 0 1 3 3 1 3 3-2 3 1 3-3 3-3-1-2 4-4-1-1-3-3-1-2-4 2-2V6l4-1z" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg> Paramètres</button><button id="export" hidden
+                style="display:none">Exporter</button><small>Données locales · À renseigner</small></div>
+    </aside>
+    <main id="top">
+        <header>
+            <div>
+                <h1>Bonjour ! 👋</h1>
+                <p>Voici la synthèse de ton patrimoine et de ta rente.</p>
+            </div>
+            <div id="date" class="date"></div>
+        </header>
+        <section class="kpis" id="kpis"></section>
+        <div class="dashboard">
+            <section class="panel" id="rent">
+                <h2>Ma rente patrimoniale (salaire)</h2>
+                <div id="rentCards"></div>
+            </section>
+            <section class="panel" id="preserve">
+                <h2>Préservation du capital</h2>
+                <div id="preserveRows"></div>
+            </section>
+            <section class="panel" id="simulation">
+                <h2>Simulation de rente durable</h2>
+                <div id="simRows"></div>
+            </section>
+            <section class="panel" id="etf">
+                <h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m2 7 10-5 10 5-10 5z" fill="currentColor" stroke="none" />
+                        <path d="m2 12 10 5 10-5M2 17l10 5 10-5" />
+                    </svg> Mes ETF <span id="etfTotal"></span></h2>
+                <div id="etfTable"></div>
+            </section>
+            <section class="panel" id="allocation">
+                <h2>Ma répartition vs objectif</h2>
+                <div id="donut"></div>
+                <div id="legend"></div>
+            </section>
+            <section class="panel" id="history">
+                <div class="history-heading">
+                    <h2>Évolution du patrimoine</h2>
+                    <div class="chart-key"><span>━ Patrimoine réel</span><span>┄ Capital à préserver</span></div>
+                </div>
+                <div id="chart"></div><small>Historique saisi manuellement</small>
+            </section>
+            <section class="panel" id="assets">
+                <h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M2 11 12 2l10 9M5 9v12h5v-7h4v7h5V9" />
+                    </svg> Autres classes d’actifs</h2>
+                <div id="assetTable"></div>
+            </section>
+            <section class="panel" id="goals">
+                <h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="13" r="9" />
+                        <circle cx="11" cy="13" r="5" />
+                        <path d="m11 13 10-10m-5 0h5v5" />
+                    </svg> Objectifs</h2>
+                <div id="goalList"></div>
+            </section>
+            <section class="panel" id="income">
+                <h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <ellipse cx="12" cy="5" rx="9" ry="3" />
+                        <path d="M3 5v14c0 4 18 4 18 0V5M3 10c0 4 18 4 18 0M3 15c0 4 18 4 18 0" />
+                    </svg> Revenus par placement <small>(mois)</small></h2>
+                <div id="incomeList"></div>
+            </section>
+            <section class="panel" id="tasks">
+                <h2><svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="16" rx="2" />
+                        <path d="M7 2v6m10-6v6M3 10h18m-14 4h3m4 0h3m-10 3h3" />
+                    </svg> Prochaines actions</h2>
+                <div id="taskList"></div>
+            </section>
+        </div>
+        <footer>Valeurs déclaratives, hors actualisation automatique des marchés.</footer>
+    </main>
+    <dialog id="detailDialog">
+        <h2>Détail des actifs</h2>
+        <div id="detailBody"></div><button onclick="this.closest('dialog').close()">Fermer</button>
+    </dialog>
+    <dialog id="editor">
+        <form id="editForm">
+            <h2>Modifier mon patrimoine</h2>
+            <p>Montants en euros. Tu peux modifier les lignes et ajouter des actifs.</p>
+            <div id="fields"></div>
+            <div class="actions"><button type="button" id="cancel">Annuler</button><button
+                    type="submit">Enregistrer</button></div>
+        </form>
+    </dialog>
+    <script src="script.js"></script>
+    <script src="finance15.js"></script>
+    <script src="backup23.js"></script>
+    <script src="v14.js"></script>
+    <script src="v16.js"></script>
+    <script src="v17.js"></script>
+    <script src="v18.js"></script>
+    <script src="finance28.js"></script>
+    <script src="v22.js"></script>
+    <script src="responsive.js"></script>
+    <script src="demo.js"></script>
+    <script src="history-fix.js"></script>
+    <script src="reports9.js"></script>
+    <script src="rente21.js"></script>
+    <script src="sections17.js"></script>
+    <script src="pilotage22.js"></script>
+    <script src="navigation14.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+(()=>{
+ const nav=document.querySelector('aside nav');
+ const norm=s=>s.trim().replace(/[’‘]/g,"'").replace(/\s+/g,' ');
+ const old=new Map([...nav.querySelectorAll('a')].map(a=>[norm(a.textContent),a]));
+ old.set('Inventaire du patrimoine',document.getElementById('details'));
+ const order=[["Vue d'ensemble","Vue d'ensemble"],['Ma stratégie','Ma stratégie'],['Matelas de sécurité','Épargne & Liquidités'],['Immobilier / SCPI','Immobilier / SCPI'],['ETF','ETF'],['Autres actions','Actions'],['Cryptomonnaies','Cryptomonnaies'],['Actifs alternatifs','Actifs alternatifs'],['Simulateur de future rente','Simulateur de rente'],['Ma rente disponible','Ma rente patrimoniale'],['Sauvegarder / Restaurer','Sauvegarder / Restaurer']];
+ const strategy=['Ma stratégie','Rééquilibrage','Radar boursier','Mes établissements'];
+ const groups={
+ 'Simulateur de future rente':[['Simulations',['Simulateur de rente','Simulateurs avancés','Stress test']]],
+ 'Ma rente disponible':[['Ma rente',['Ma rente patrimoniale','Lissage de la rente','Frais et fiscalité']],['Bilan & Objectifs',['Bilan & Objectifs','Objectifs personnalisés']],['Suivi & Rapports',['Suivi & Rapports','Rentabilité cumulée']],['Inventaire du patrimoine',['Inventaire du patrimoine']],['Calendrier & Alertes',['Calendrier patrimonial','Notifications']]],
+ 'Sauvegarder / Restaurer':[['Sauvegardes et échanges',['Sauvegarder / Restaurer','Importer CSV','Sauvegarde chiffrée']],['Documents',['Documents','Documents locaux']]]};
+ const used=new Set([...order.map(x=>x[1]),...strategy,...Object.values(groups).flatMap(g=>g.flatMap(x=>x[1]))]);
+ const missing=[...used].filter(k=>!old.get(k));if(missing.length){console.error('Navigation : entrées manquantes',missing);return;}
+ const extra=[...old.keys()].filter(k=>!used.has(k)&&!['Analyse patrimoniale','Rapports des clôtures','Actualiser mon patrimoine'].includes(k));if(extra.length)groups['Sauvegarder / Restaurer'].push(['Autres outils',extra]);
+ const hub=document.createElement('dialog');hub.id='navigation14';document.body.append(hub);
+ function launch(key,from){if(from?.open)from.close();old.get(key).click();}
+ function button(key,from,label=key){const b=document.createElement('button');b.type='button';b.textContent=label;b.dataset.original=key;b.onclick=()=>launch(key,from);return b;}
+ function openGroup(title){
+ if(title==='Ma rente disponible'||title==='Simulateur de future rente'||title==='Sauvegarder / Restaurer'){
+ hub.replaceChildren();hub.classList.add('unified17');const head=document.createElement('div');head.className='v14head';const h=document.createElement('h2');h.textContent=title==='Sauvegarder / Restaurer'?'Sauvegardes & Documents':title;const close=document.createElement('button');close.textContent='Fermer';close.onclick=()=>hub.close();head.append(h,close);hub.append(head);
+ for(const [heading,keys] of groups[title]){const group=document.createElement('div');group.className='unified17group';for(const key of keys){if(title==='Ma rente disponible'&&!['Ma rente','Bilan & Objectifs','Calendrier & Alertes'].includes(heading)){group.append(button(key,hub));continue;}const section=document.createElement('section');section.className='unified17section';section.dataset.panel22=key;group.append(section);globalThis.mpWithSection(section,()=>old.get(key).click());}hub.append(group)}hub.showModal();return;
+ }
+ hub.classList.remove('unified17');hub.replaceChildren();const head=document.createElement('div');head.className='v14head';const h=document.createElement('h2');h.textContent=title;const close=document.createElement('button');close.textContent='Fermer';close.onclick=()=>hub.close();head.append(h,close);hub.append(head);for(const [heading,keys] of groups[title]){const section=document.createElement('section');if(groups[title].length>1){const h3=document.createElement('h3');h3.textContent=heading;section.append(h3)}const grid=document.createElement('div');grid.className='navigation14grid';for(const key of keys)grid.append(button(key,hub,key==='Simulateur de rente'?'Simulateur de future rente':key==='Ma rente patrimoniale'?'Ma rente disponible — gestion':key));section.append(grid);hub.append(section)}hub.showModal();}
+ const sd=document.getElementById('strategyDialog');const tools=document.createElement('div');tools.className='navigation14grid';tools.id='strategyTools14';for(const key of strategy.slice(1))tools.append(button(key,sd));sd.querySelector('.strategy-layout').after(tools);
+ const archive=document.createElement('div');archive.hidden=true;archive.id='oldNavigation14';for(const a of nav.querySelectorAll('a'))archive.append(a);nav.append(archive);document.getElementById('details').style.display='none';
+ const alertButton=document.createElement('button');alertButton.type='button';alertButton.onclick=()=>{openGroup('Ma rente disponible');hub.querySelector('[data-panel22="Notifications"]')?.scrollIntoView({block:'start'})};document.querySelector('header').append(alertButton);const priorRender=render;render=function(){priorRender();alertButton.textContent='Alertes patrimoniales : '+pilotage22.alerts(data,finance15.bilan(data).month).length};alertButton.textContent='Alertes patrimoniales : '+pilotage22.alerts(data,finance15.bilan(data).month).length;
+ for(const [label,key] of order){const a=document.createElement('a');a.href=old.get(key).getAttribute('href')||'#';const icon=old.get(key).querySelector('svg');if(icon)a.append(icon.cloneNode(true));a.append(document.createTextNode(' '+(label==='Sauvegarder / Restaurer'?'Sauvegardes & Documents':label)));a.onclick=e=>{e.preventDefault();if(groups[label])openGroup(label);else launch(key)};nav.append(a)}
+})();
